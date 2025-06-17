@@ -1,0 +1,682 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전역 스타일 */
+:root {
+    --nexon-blue: #1a75ff;
+    --nexon-dark: #333;
+    --nexon-gray: #666;
+    --nexon-light-gray: #f5f5f5;
+    --nexon-bg: #f8f8f8;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    background-color: var(--nexon-bg);
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Common Header Styles */
+.header {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header a {
+    display: block;
+    text-decoration: none;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: all 0.3s;
+}
+
+.auth-buttons a:first-child {
+    color: #666;
+}
+
+.auth-buttons a:first-child:hover {
+    color: #333;
+}
+
+.auth-buttons a:last-child {
+    border: 1px solid #1a75ff;
+    color: #1a75ff;
+    border-radius: 4px;
+}
+
+.auth-buttons a:last-child:hover {
+    background-color: #1a75ff;
+    color: white;
+}
+
+/* 로그인/회원가입 페이지용 헤더 스타일 */
+.nexon-logo-wrapper {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.nexon-logo-wrapper .logo-container {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nexon-logo-wrapper .logo-container img {
+    height: 30px;
+    width: auto;
+}
+
+/* 메인 배너 */
+.main-banner {
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 560px;
+}
+
+/* 게임 헤더 스타일 */
+.game-header {
+    margin-top: 0;
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-images {
+    display: flex;
+    width: 500%;  /* 이미지 5장이므로 500% */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-image {
+    width: 20%;  /* 5장의 이미지이므로 20% */
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.banner-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.indicator-item {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+.indicator-item.active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.indicator-text {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+.indicator-bar {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.indicator-progress {
+    width: 0%;
+    height: 100%;
+    background-color: #1a75ff;
+    border-radius: 2px;
+    transition: width 0.1s linear;
+}
+
+.indicator-item.active .indicator-progress {
+    animation: progress 5s linear;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.banner-text {
+    max-width: 500px;
+    z-index: 1;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    color: var(--nexon-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.new-tag {
+    display: inline-block;
+    font-size: 1rem;
+    color: #ff3366;
+    margin-left: 0.5rem;
+    vertical-align: super;
+}
+
+.banner-subtitle {
+    font-size: 1.2rem;
+    color: var(--nexon-gray);
+    margin-bottom: 2rem;
+}
+
+.banner-date {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 게임 그리드 스타일 */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.game-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 1rem;
+}
+
+.game-title {
+    font-size: 1.1rem;
+    color: var(--nexon-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+.game-category {
+    color: var(--nexon-gray);
+    font-size: 0.85rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: white;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--nexon-gray);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-links a.important {
+    color: var(--nexon-blue);
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 1024px) {
+    .game-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 45px;
+    }
+
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1rem;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        margin: 0;
+    }
+
+    .nexon-logo {
+        height: 18px;
+    }
+
+    .header-nav {
+        right: 15px;
+    }
+
+    .guest-links {
+        gap: 15px;
+    }
+
+    .guest-links a {
+        font-size: 13px;
+    }
+
+    .guest-links .login-link {
+        padding: 3px 12px;
+    }
+
+    .nexon-logo-wrapper {
+        padding: 0.8rem 1rem;
+    }
+
+    .nexon-logo-wrapper .logo-container img {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        height: 40px;
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-content {
+        padding: 1rem;
+    }
+
+    .nexon-logo {
+        height: 16px;
+    }
+
+    .guest-links {
+        gap: 10px;
+    }
+
+    .guest-links a {
+        font-size: 12px;
+    }
+
+    .guest-links .login-link {
+        padding: 3px 10px;
+    }
+}
+
+/* Character Section Styles */
+.character-section {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.character-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.more-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.character-showcase {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.character-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+}
+
+.character-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.character-info {
+    padding: 20px;
+}
+
+.character-name {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.character-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.character-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-label {
+    min-width: 60px;
+    font-size: 14px;
+    color: #666;
+}
+
+.stat-bar {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background-color: #FF6B6B;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .character-showcase {
+        gap: 20px;
+    }
+
+    .character-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Game Pages Specific Styles */
+.game-page .header {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-page .logo {
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.game-page .auth-buttons {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.game-page .auth-buttons a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: all 0.3s;
+}
+
+.game-page .auth-buttons a:first-child {
+    color: #666;
+}
+
+.game-page .auth-buttons a:first-child:hover {
+    color: #333;
+}
+
+.game-page .auth-buttons a:last-child {
+    border: 1px solid #1a75ff;
+    color: #1a75ff;
+    border-radius: 4px;
+}
+
+.game-page .auth-buttons a:last-child:hover {
+    background-color: #1a75ff;
+    color: white;
+}
+
+/* Search Styles */
+.search-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.search-box h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.search-button {
+    width: 40px;
+    height: 100%;
+    background: none;
+    border: none;
+    border-left: 1px solid #ddd;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.search-button:hover {
+    background-color: #f5f5f5;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+/* 회원가입, 로그인 페이지의 로고 크기는 기존 크기 유지 */
+.auth-page .logo {
+    height: 30px;
+} 

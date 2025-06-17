@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엘소드 - NEXON</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/elsword-styles.css">
+</head>
+<body class="game-page">
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo_nexon.png" alt="NEXON" class="logo">
+        </a>
+        <div class="auth-buttons">
+            <a href="signup.html">회원가입</a>
+            <a href="login.html">로그인</a>
+        </div>
+    </header>
+
+    <div class="game-header">
+        <div class="game-header-container">
+            <div class="game-logo">
+                <a href="elsword.html">
+                    <img src="images/elsword_logo.png" alt="엘소드 로고">
+                </a>
+            </div>
+            <nav class="game-nav">
+                <ul>
+                    <li class="nav-item has-dropdown" data-category="news">
+                        <a href="#">게임소식</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="game-info">
+                        <a href="#">게임정보</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="community">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="media">
+                        <a href="#">미디어</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="customer">
+                        <a href="#">고객지원</a>
+                    </li>
+                </ul>
+                <div class="fulldown-container">
+                    <div class="fulldown-content">
+                        <div class="menu-section" data-category="news">
+                            <h3>게임소식</h3>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">업데이트</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">패치노트</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="game-info">
+                            <h3>게임정보</h3>
+                            <ul>
+                                <li><a href="#">게임소개</a></li>
+                                <li><a href="#">캐릭터정보</a></li>
+                                <li><a href="#">아이템정보</a></li>
+                                <li><a href="#">게임가이드</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="community">
+                            <h3>커뮤니티</h3>
+                            <ul>
+                                <li><a href="#">자유게시판</a></li>
+                                <li><a href="#">팁과노하우</a></li>
+                                <li><a href="#">창작게시판</a></li>
+                                <li><a href="#">거래게시판</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="media">
+                            <h3>미디어</h3>
+                            <ul>
+                                <li><a href="#">스크린샷</a></li>
+                                <li><a href="#">동영상</a></li>
+                                <li><a href="#">음악</a></li>
+                                <li><a href="#">배경화면</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="customer">
+                            <h3>고객지원</h3>
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="#">버그신고</a></li>
+                                <li><a href="#">제재내역</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="cta-button">
+                <a href="#" class="game-start-btn">게임시작</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-banner">
+            <div class="banner-content">
+                <div class="banner-slider">
+                    <img src="images/elsword_banner.png" alt="엘소드 배너 1" class="banner-image">
+                    <img src="images/elsword_banner2.jpg" alt="엘소드 배너 2" class="banner-image">
+                </div>
+                <div class="banner-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="news-container">
+                <div class="news-tabs">
+                    <div class="tab-header">
+                        <h2>공지사항 <a href="elsword_notice.html"><img src="images/add.png" alt="더보기" class="more-icon"></a></h2>
+                        <div class="news-list">
+                            <div class="news-item">
+                                <span class="category">공지</span>
+                                <span class="title">5/30(목) 비정상 게임 이용 의심 사용자 및 불성실 플레이 단속 안내</span>
+                                <span class="date">2025.05.30</span>
+                            </div>
+                            <div class="news-item">
+                                <span class="category">공지</span>
+                                <span class="title">GM감의 엘소드 통합 단속 결과 공지(5월 4주)</span>
+                                <span class="date">2025.05.30</span>
+                            </div>
+                            <div class="news-item">
+                                <span class="category">공지</span>
+                                <span class="title">게임 가이드 요청 Q&A 75차 공지</span>
+                                <span class="date">2025.05.30</span>
+                            </div>
+                            <div class="news-item">
+                                <span class="category">점검</span>
+                                <span class="title">5/29 (목) 정기점검 안내</span>
+                                <span class="date">2025.05.28</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-sliders-container">
+                    <div class="banner-slider">
+                        <div class="slider-container">
+                            <div class="slider-track">
+                                <div class="slider-item">
+                                    <img src="images/elsword_item_banner1.jpg" alt="배너 1">
+                                    <div class="banner-info">
+                                        <span class="banner-category">이벤트</span>
+                                        <h3>신규 코스튬 출시</h3>
+                                        <p>엘소드 여름 특별 코스튬 컬렉션</p>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <img src="images/elsword_item_banner2.jpg" alt="배너 2">
+                                    <div class="banner-info">
+                                        <span class="banner-category">업데이트</span>
+                                        <h3>신규 던전 오픈</h3>
+                                        <p>초월의 미궁 업데이트</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-indicators">
+                                <span class="indicator active"></span>
+                                <span class="indicator"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="banner-slider">
+                        <div class="slider-container">
+                            <div class="slider-track">
+                                <div class="slider-item">
+                                    <img src="images/elsword_item_banner3.jpg" alt="배너 3">
+                                    <div class="banner-info">
+                                        <span class="banner-category">업데이트</span>
+                                        <h3>신규 던전 업데이트</h3>
+                                        <p>새로운 모험이 시작됩니다</p>
+                                    </div>
+                                </div>
+                                <div class="slider-item">
+                                    <img src="images/elsword_item_banner4.png" alt="배너 4">
+                                    <div class="banner-info">
+                                        <span class="banner-category">이벤트</span>
+                                        <h3>특별 패키지</h3>
+                                        <p>엘소드 겨울 특별 패키지 판매</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-indicators">
+                                <span class="indicator active"></span>
+                                <span class="indicator"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="character-section">
+            <h2>엘소드 캐릭터 <img src="images/add.png" alt="더보기" class="more-icon"></h2>
+            <div class="character-showcase">
+                <div class="character-card">
+                    <img src="images/elsword_ch_nam.PNG" alt="엘소드" class="character-image">
+                    <div class="character-info">
+                        <h3 class="character-name">엘소드</h3>
+                        <p class="character-description">엘리오스의 영웅 엘스의 동생. 검술 실력이 뛰어나며 정의감이 강한 소년.</p>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">공격력</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">방어력</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">난이도</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <img src="images/elsword_ch_one.PNG" alt="아라" class="character-image">
+                    <div class="character-info">
+                        <h3 class="character-name">아라</h3>
+                        <p class="character-description">한나라의 무술을 수련한 무예가. 신수의 힘을 빌려 강력한 기공술을 구사.</p>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">공격력</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">방어력</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">난이도</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <img src="images/elsword_ch_radi.PNG" alt="라비" class="character-image">
+                    <div class="character-info">
+                        <h3 class="character-name">라비</h3>
+                        <p class="character-description">활발하고 호기심 많은 성격으로 매사에 긍정적. 자신이 몰랐던 세계를 배우고자 열심히 노력하고 있다.</p>
+                        <div class="character-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">공격력</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">방어력</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">난이도</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="creative-board">
+            <h2>창작게시판 <img src="images/add.png" alt="더보기" class="more-icon"></h2>
+            <div class="creative-grid">
+                <div class="creative-card">
+                    <div class="card-image">
+                        <img src="images/shot1.png" alt="엘소드 스크린샷 1">
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">스크린샷</span>
+                        <h3>무제</h3>
+                        <div class="author-info">
+                            <div class="author-left">
+                                <img src="images/thumb_char_3.png" alt="프로필" class="profile-img">
+                                <span class="author">당묘</span>
+                            </div>
+                            <span class="level">Lv.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="creative-card">
+                    <div class="card-image">
+                        <img src="images/shot2.png" alt="엘소드 스크린샷 2">
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">팬카툰</span>
+                        <h3>엘과일.75</h3>
+                        <div class="author-info">
+                            <div class="author-left">
+                                <img src="images/thumb_char_2.png" alt="프로필" class="profile-img">
+                                <span class="author">귤뮬</span>
+                            </div>
+                            <span class="level">Lv.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="creative-card">
+                    <div class="card-image">
+                        <img src="images/shot3.png" alt="엘소드 스크린샷 3">
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">팬카툰</span>
+                        <h3>네 감사합니다</h3>
+                        <div class="author-info">
+                            <div class="author-left">
+                                <img src="images/thumb_char_4.png" alt="프로필" class="profile-img">
+                                <span class="author">가면</span>
+                            </div>
+                            <span class="level">Lv.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="creative-card">
+                    <div class="card-image">
+                        <img src="images/shot4.png" alt="엘소드 스크린샷 4">
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">팬아트</span>
+                        <h3>양염 그려봤습니다</h3>
+                        <div class="author-info">
+                            <div class="author-left">
+                                <img src="images/thumb_char_1.png" alt="프로필" class="profile-img">
+                                <span class="author">은팡</span>
+                            </div>
+                            <span class="level">Lv.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-box character-search">
+                    <h2>캐릭터 검색 <img src="images/search.png" alt="검색" class="search-icon"></h2>
+                    <div class="search-form">
+                        <div class="search-input-group">
+                            <input type="text" placeholder="캐릭터명을 입력하세요" class="search-input" id="character-search-input">
+                        </div>
+                        <div class="search-buttons">
+                            <button class="search-btn" id="character-search-btn">검색</button>
+                            <button class="reset-btn" id="character-search-reset">초기화</button>
+                        </div>
+                    </div>
+                    <div class="recent-searches">
+                        <h3>최근 검색</h3>
+                        <div class="recent-list">
+                            <span class="recent-item">엘소드마스터 <img src="images/search.png" alt="다시 검색" class="research-icon"></span>
+                            <span class="recent-item">레이븐킹 <img src="images/search.png" alt="다시 검색" class="research-icon"></span>
+                            <span class="recent-item">이브여신 <img src="images/search.png" alt="다시 검색" class="research-icon"></span>
+                        </div>
+                    </div>
+                    <div class="popular-character" id="popularCharacter">
+                        <h3>인기 캐릭터</h3>
+                        <div class="character-card">
+                            <div class="character-profile">
+                                <img src="images/thumb_char_2.png" alt="귤뮬" class="character-thumb">
+                                <div class="character-basic-info">
+                                    <div class="class-info">
+                                        <span class="character-class">아라</span>
+                                        <span class="character-subclass">비천</span>
+                                    </div>
+                                    <div class="name-info">
+                                        <span class="character-name">귤뮬</span>
+                                        <span class="level">Lv.99</span>
+                                    </div>
+                                    <div class="guild-info">
+                                        <span class="guild">블랙크로우</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-results" style="display: none;" id="character-search-results-section">
+                        <h3>검색 결과 (<span id="character-result-count">0</span>개)</h3>
+                        <div class="character-results-grid">
+                            <!-- 검색 결과가 여기에 동적으로 추가됩니다 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-box item-search">
+                    <h2>아이템 검색 <img src="images/search.png" alt="검색" class="search-icon"></h2>
+                    <div class="search-form">
+                        <div class="search-input-group">
+                            <input type="text" placeholder="아이템명을 입력하세요" class="search-input" id="item-search-input">
+                            <select class="category-select" id="item-category-select">
+                                <option value="all">전체</option>
+                                <option value="악세서리">악세서리</option>
+                                <option value="코스튬">코스튬</option>
+                                <option value="스킨">스킨</option>
+                                <option value="가열기">가열기</option>
+                            </select>
+                        </div>
+                        <div class="search-buttons">
+                            <button class="search-btn" id="item-search-btn">검색</button>
+                            <button class="reset-btn" id="search-reset-btn">초기화</button>
+                        </div>
+                    </div>
+                    <div class="search-results" style="display: none;">
+                        <h3>검색 결과 (<span id="item-result-count">0</span>개)</h3>
+                        <div id="item-search-results" class="item-results-grid"></div>
+                    </div>
+                    <div class="popular-items" id="popular-items-section">
+                        <h3>인기 아이템</h3>
+                        <div class="item-list">
+                            <div class="popular-item">
+                                <img src="images/item_banner.PNG" alt="인기 아이템" class="item-thumb">
+                                <span class="item-name">엘스타2 리오더샵</span>
+                            </div>
+                        </div>
+                        <div class="view-all-wrapper">
+                            <a href="elsword_items.html" class="view-all-btn">아이템 전체보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/elsword_item_search.js"></script>
+    <script src="js/elsword_character_search.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userInfo = document.querySelector('.user-info');
+            const guestLinks = document.querySelector('.guest-links');
+            const userNickname = document.querySelector('.user-nickname');
+            const logoutButton = document.querySelector('.logout-button');
+
+            // 로그인 상태 확인
+            const loggedInUser = sessionStorage.getItem('loggedInUser');
+            
+            if (loggedInUser && userInfo && guestLinks && userNickname) {
+                const user = JSON.parse(loggedInUser);
+                userNickname.textContent = `${user.nickname}`;
+                userInfo.style.display = 'flex';
+                guestLinks.style.display = 'none';
+            } else if (userInfo && guestLinks) {
+                userInfo.style.display = 'none';
+                guestLinks.style.display = 'flex';
+            }
+
+            // 로그아웃 처리
+            if (logoutButton) {
+                logoutButton.addEventListener('click', () => {
+                    sessionStorage.removeItem('loggedInUser');
+                    if (userInfo && guestLinks) {
+                        userInfo.style.display = 'none';
+                        guestLinks.style.display = 'flex';
+                    }
+                    window.location.reload();
+                });
+            }
+
+            // 배너 슬라이드 기능
+            const bannerSlider = document.querySelector('.banner-slider');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentSlide = 0;
+            const totalSlides = 2;
+            let slideInterval;
+
+            // 슬라이드 업데이트 함수
+            function updateSlide() {
+                bannerSlider.style.transform = `translateX(-${currentSlide * 50}%)`;
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            // 다음 슬라이드로 이동
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlide();
+            }
+
+            // 자동 슬라이드 시작
+            function startSlideTimer() {
+                slideInterval = setInterval(nextSlide, 5000); // 5초마다 슬라이드 변경
+            }
+
+            // 인디케이터 클릭 이벤트
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    currentSlide = index;
+                    updateSlide();
+                    startSlideTimer();
+                });
+            });
+
+            // 초기 슬라이드 타이머 시작
+            startSlideTimer();
+        });
+    </script>
+</body>
+</html> 

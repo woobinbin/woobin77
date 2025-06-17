@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엘소드 공지사항</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/elsword-styles.css">
+    <style>
+        .notice-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab-button {
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border: none;
+            background: none;
+            color: #666;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .tab-button.active {
+            color: #ff3366;
+            font-weight: bold;
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff3366;
+        }
+
+        .notice-list {
+            border-top: 2px solid #333;
+        }
+
+        .notice-item {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 1rem;
+            border-bottom: 1px solid #eee;
+            gap: 2rem;
+        }
+
+        .notice-item .category {
+            padding: 0.3rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .notice-item .category.notice {
+            background-color: #e6f3ff;
+            color: #1a75ff;
+        }
+
+        .notice-item .category.check {
+            background-color: #ffe6e6;
+            color: #ff3366;
+        }
+
+        .notice-item .title {
+            flex: 1;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .notice-item .title:hover {
+            color: #ff3366;
+        }
+
+        .notice-item .writer,
+        .notice-item .date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .notice-item.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="game-page">
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo_nexon.png" alt="NEXON" class="logo">
+        </a>
+        <div class="auth-buttons">
+            <a href="signup.html">회원가입</a>
+            <a href="login.html">로그인</a>
+        </div>
+    </header>
+
+    <div class="game-header">
+        <div class="game-header-container">
+            <div class="game-logo">
+                <a href="elsword.html">
+                    <img src="images/elsword_logo.png" alt="엘소드 로고">
+                </a>
+            </div>
+            <nav class="game-nav">
+                <ul>
+                    <li class="nav-item has-dropdown" data-category="news">
+                        <a href="#">게임소식</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="game-info">
+                        <a href="#">게임정보</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="community">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="media">
+                        <a href="#">미디어</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="customer">
+                        <a href="#">고객지원</a>
+                    </li>
+                </ul>
+                <div class="fulldown-container">
+                    <div class="fulldown-content">
+                        <div class="menu-section" data-category="news">
+                            <h3>게임소식</h3>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">업데이트</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">패치노트</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="game-info">
+                            <h3>게임정보</h3>
+                            <ul>
+                                <li><a href="#">게임소개</a></li>
+                                <li><a href="#">캐릭터정보</a></li>
+                                <li><a href="#">아이템정보</a></li>
+                                <li><a href="#">게임가이드</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="community">
+                            <h3>커뮤니티</h3>
+                            <ul>
+                                <li><a href="#">자유게시판</a></li>
+                                <li><a href="#">팁과노하우</a></li>
+                                <li><a href="#">창작게시판</a></li>
+                                <li><a href="#">거래게시판</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="media">
+                            <h3>미디어</h3>
+                            <ul>
+                                <li><a href="#">스크린샷</a></li>
+                                <li><a href="#">동영상</a></li>
+                                <li><a href="#">음악</a></li>
+                                <li><a href="#">배경화면</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="customer">
+                            <h3>고객지원</h3>
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="#">버그신고</a></li>
+                                <li><a href="#">제재내역</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="cta-button">
+                <a href="#" class="game-start-btn">게임시작</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="notice-page">
+            <h1 class="page-title">공지사항</h1>
+            <div class="notice-tabs">
+                <button class="tab-button active" data-category="all">전체</button>
+                <button class="tab-button" data-category="notice">공지</button>
+                <button class="tab-button" data-category="check">점검</button>
+            </div>
+            <div class="notice-list">
+                <div class="notice-item">
+                    <span class="category notice">공지</span>
+                    <a href="#" class="title">5/30(목) 비정상 게임 이용 의심 사용자 및 불성실 플레이 단속 안내</a>
+                    <span class="writer">운영진</span>
+                    <span class="date">2025.05.30</span>
+                </div>
+                <div class="notice-item">
+                    <span class="category notice">공지</span>
+                    <a href="#" class="title">GM감의 엘소드 통합 단속 결과 공지(5월 4주)</a>
+                    <span class="writer">운영진</span>
+                    <span class="date">2025.05.30</span>
+                </div>
+                <div class="notice-item">
+                    <span class="category notice">공지</span>
+                    <a href="#" class="title">게임 가이드 요청 Q&A 75차 공지</a>
+                    <span class="writer">운영진</span>
+                    <span class="date">2025.05.30</span>
+                </div>
+                <div class="notice-item">
+                    <span class="category check">점검</span>
+                    <a href="#" class="title">5/29 (목) 정기점검 안내</a>
+                    <span class="writer">운영진</span>
+                    <span class="date">2025.05.28</span>
+                </div>
+                <div class="notice-item">
+                    <span class="category check">점검</span>
+                    <a href="#" class="title">(수정) 5/22(목) 정기점검 안내</a>
+                    <span class="writer">운영진</span>
+                    <span class="date">2025.05.21</span>
+                </div>
+                <div class="notice-item">
+                    <span class="category check">점검</span>
+                    <a href="#" class="title">5/15 (목) 정기점검 안내</a>
+                    <span class="writer">운영진</span>
+                    <span class="date">2025.05.14</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const noticeItems = document.querySelectorAll('.notice-item');
+
+            // 카테고리 필터링 함수
+            function filterNotices(category) {
+                noticeItems.forEach(item => {
+                    const itemCategory = item.querySelector('.category').classList.contains(category);
+                    if (category === 'all' || itemCategory) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            }
+
+            // 탭 버튼 클릭 이벤트
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // 활성 탭 스타일 변경
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // 카테고리 필터링 적용
+                    const category = button.dataset.category;
+                    filterNotices(category);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

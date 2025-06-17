@@ -1,0 +1,167 @@
+/* 검색 결과 컨테이너 */
+.search-result-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.search-result-container h2 {
+    color: var(--dnf-gold);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+/* 검색 폼 */
+.search-form {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.server-select {
+    margin-bottom: 1rem;
+}
+
+.server-select select {
+    padding: 0.8rem;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.character-search-input {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.character-search-input input {
+    flex: 1;
+    padding: 0.8rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.search-button {
+    padding: 0.8rem 2rem;
+    background-color: var(--dnf-red);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    background-color: #ff1a1a;
+}
+
+/* 검색 태그 */
+.search-tags {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tag {
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.tag.active {
+    background-color: var(--dnf-red);
+}
+
+.tag-remove {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* 검색 결과 */
+.search-result h3 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.character-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+}
+
+.character-image {
+    width: 100%;
+    height: 280px;
+    background-color: white;
+    position: relative;
+}
+
+.character-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character-info {
+    padding: 1rem;
+}
+
+.level {
+    color: var(--dnf-gold);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.class {
+    display: flex;
+    gap: 0.5rem;
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.fame {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dnf-gold);
+    font-size: 0.9rem;
+}
+
+.fame-icon {
+    width: 16px;
+    height: 16px;
+} 

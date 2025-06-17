@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엘소드 아이템 목록</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/elsword-styles.css">
+    <style>
+        .items-page {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .item-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .item-info {
+            padding: 1rem;
+        }
+
+        .item-category {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-title {
+            margin: 0.5rem 0;
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        .item-description {
+            color: #666;
+            font-size: 0.875rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="game-page">
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo_nexon.png" alt="NEXON" class="logo">
+        </a>
+        <div class="auth-buttons">
+            <a href="signup.html">회원가입</a>
+            <a href="login.html">로그인</a>
+        </div>
+    </header>
+
+    <div class="game-header">
+        <div class="game-header-container">
+            <div class="game-logo">
+                <a href="elsword.html">
+                    <img src="images/elsword_logo.png" alt="엘소드 로고">
+                </a>
+            </div>
+            <nav class="game-nav">
+                <ul>
+                    <li class="nav-item has-dropdown" data-category="news">
+                        <a href="#">게임소식</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="game-info">
+                        <a href="#">게임정보</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="community">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="media">
+                        <a href="#">미디어</a>
+                    </li>
+                    <li class="nav-item has-dropdown" data-category="customer">
+                        <a href="#">고객지원</a>
+                    </li>
+                </ul>
+                <div class="fulldown-container">
+                    <div class="fulldown-content">
+                        <div class="menu-section" data-category="news">
+                            <h3>게임소식</h3>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">업데이트</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">패치노트</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="game-info">
+                            <h3>게임정보</h3>
+                            <ul>
+                                <li><a href="#">게임소개</a></li>
+                                <li><a href="#">캐릭터정보</a></li>
+                                <li><a href="#">아이템정보</a></li>
+                                <li><a href="#">게임가이드</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="community">
+                            <h3>커뮤니티</h3>
+                            <ul>
+                                <li><a href="#">자유게시판</a></li>
+                                <li><a href="#">팁과노하우</a></li>
+                                <li><a href="#">창작게시판</a></li>
+                                <li><a href="#">거래게시판</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="media">
+                            <h3>미디어</h3>
+                            <ul>
+                                <li><a href="#">스크린샷</a></li>
+                                <li><a href="#">동영상</a></li>
+                                <li><a href="#">음악</a></li>
+                                <li><a href="#">배경화면</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-section" data-category="customer">
+                            <h3>고객지원</h3>
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="#">버그신고</a></li>
+                                <li><a href="#">제재내역</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="cta-button">
+                <a href="#" class="game-start-btn">게임시작</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="items-page">
+            <h1 class="page-title">상점 아이템 목록</h1>
+            <div class="items-grid">
+                <div class="item-card">
+                    <img src="images/shop1.jpg" alt="시어터 스낵 파티" class="item-image">
+                    <div class="item-info">
+                        <span class="item-category">악세서리</span>
+                        <h3 class="item-title">시어터 스낵 파티</h3>
+                        <p class="item-description">배고픈 당신을 위한 간식세트!</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="images/shop2.jpg" alt="신비한 아쿠아리움" class="item-image">
+                    <div class="item-info">
+                        <span class="item-category">스킨</span>
+                        <h3 class="item-title">신비한 아쿠아리움</h3>
+                        <p class="item-description">깊은 바다의 신비로움</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="images/shop3.jpg" alt="키네틱 에너럽" class="item-image">
+                    <div class="item-info">
+                        <span class="item-category">코스튬</span>
+                        <h3 class="item-title">키네틱 애니멀</h3>
+                        <p class="item-description">시원한 바람과 함께 활기찬 나들이</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="images/shop4.jpg" alt="지난 가을기 복각" class="item-image">
+                    <div class="item-info">
+                        <span class="item-category">가열기</span>
+                        <h3 class="item-title">지난 가열기 복각</h3>
+                        <p class="item-description">다시 돌아온 가열기</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="images/shop5.jpg" alt="커스텀 아이" class="item-image">
+                    <div class="item-info">
+                        <span class="item-category">악세서리</span>
+                        <h3 class="item-title">커스텀 아이</h3>
+                        <p class="item-description">새로운 모험을 시작하세요</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="images/shop6.jpg" alt="스프링 미뉴에트" class="item-image">
+                    <div class="item-info">
+                        <span class="item-category">코스튬</span>
+                        <h3 class="item-title">스프링 미뉴에트</h3>
+                        <p class="item-description">봄의 향기를 담은 특별한 선물</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="images/shop7.jpg" alt="신규 가일기:팽호기담" class="item-image">
+                    <div class="item-info">
+                        <span class="item-category">가열기</span>
+                        <h3 class="item-title">신규 가열기:팽호기담</h3>
+                        <p class="item-description">새로운 이야기가 시작됩니다</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="images/shop8.jpg" alt="여름 아바타" class="item-image">
+                    <div class="item-info">
+                        <span class="item-category">코스튬</span>
+                        <h3 class="item-title">여름 아바타</h3>
+                        <p class="item-description">시원한 여름을 위한 특별한 의상</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/elsword_item_search.js"></script>
+</body>
+</html> 

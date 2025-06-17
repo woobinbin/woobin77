@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXON - 로그인</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/login-styles.css">
+</head>
+<body>
+    <div class="nexon-logo-wrapper">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo_nexon.png" alt="넥슨 로고">
+            </a>
+        </div>
+    </div>
+
+    <main class="login-main">
+        <div class="login-container">
+            <div class="login-header">
+                <h1 class="login-title">NEXON ID 로그인</h1>
+                <p class="login-subtitle">하나의 넥슨 ID로 모든 넥슨 게임을 즐기세요!</p>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="넥슨 ID" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="비밀번호" required>
+                </div>
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkmark"></span>
+                        아이디 저장
+                    </label>
+                    <div class="secure-login">
+                        <img src="images/security.png" alt="보안" class="security-icon">
+                        <span>보안접속</span>
+                    </div>
+                </div>
+                <button type="submit" class="login-button">로그인</button>
+                
+                <div class="login-links">
+                    <a href="#" class="find-id">아이디 찾기</a>
+                    <span class="divider">|</span>
+                    <a href="#" class="find-password">비밀번호 찾기</a>
+                    <span class="divider">|</span>
+                    <a href="signup.html" class="sign-up">회원가입</a>
+                </div>
+            </form>
+
+            <div class="qr-login">
+                <h3>QR코드 로그인</h3>
+                <div class="qr-container">
+                    <img src="images/qrcode.png" alt="QR 코드" class="qr-code">
+                    <p class="qr-guide">
+                        <img src="images/mobile.png" alt="모바일" class="mobile-icon">
+                        넥슨 모바일 앱으로 QR코드를 스캔하세요
+                    </p>
+                </div>
+            </div>
+
+            <div class="social-login">
+                <h3>간편 로그인</h3>
+                <div class="social-buttons">
+                    <button class="social-button google">
+                        <img src="images/google_logo.png" alt="Google">
+                        Google 계정으로 로그인
+                    </button>
+                    <button class="social-button facebook">
+                        <img src="images/facebook_logo.png" alt="Facebook">
+                        Facebook 계정으로 로그인
+                    </button>
+                    <button class="social-button naver">
+                        <img src="images/naver_logo.png" alt="Naver">
+                        네이버 계정으로 로그인
+                    </button>
+                </div>
+            </div>
+
+     
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#" class="important">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+                <a href="#">회원탈퇴</a>
+                <a href="#">고객센터</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html> 

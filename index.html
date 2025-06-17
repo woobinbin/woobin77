@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXON</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo_nexon.png" alt="NEXON" class="logo">
+        </a>
+        <div class="auth-buttons">
+            <a href="signup.html">회원가입</a>
+            <a href="login.html">로그인</a>
+        </div>
+    </header>
+
+    <section class="main-banner">
+        <div class="banner-content">
+            <div class="banner-images">
+                <img src="images/home_banner.png" alt="배너 1" class="banner-image">
+                <img src="images/home_banner2.jpg" alt="배너 2" class="banner-image">
+                <img src="images/home_banner3.jpg" alt="배너 3" class="banner-image">
+                <img src="images/home_banner4.png" alt="배너 4" class="banner-image">
+                <img src="images/home_banner5.jpg" alt="배너 5" class="banner-image">
+            </div>
+            <div class="banner-indicators">
+                <div class="indicator-item active">
+                    <div class="indicator-text">My 데스크 패드 open</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-progress"></div>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-text">블루 아카이브 헌혈..</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-progress"></div>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-text">좀비 히어로 클래식 업데..</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-progress"></div>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-text">블루 아카이브 x 무신사 콜..</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-progress"></div>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-text">[던전앤파이터]키메라,패러...</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="game-grid">
+            <a href="elsword.html" class="game-card">
+                <img src="images/elsword_title.png" alt="엘소드" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">엘소드</h3>
+                    <p class="game-category">액션 RPG</p>
+                </div>
+            </a>
+            <a href="dungeon.html" class="game-card">
+                <img src="images/dungeon_title.jpg" alt="던전앤파이터" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">던전앤파이터</h3>
+                    <p class="game-category">액션 RPG</p>
+                </div>
+            </a>
+            <a href="#" class="game-card">
+                <img src="images/counter_title.jpg" alt="카운터 스트라이크 온라인" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">카운터 스트라이크 온라인</h3>
+                    <p class="game-category">FPS</p>
+                </div>
+            </a>
+            <a href="#" class="game-card">
+                <img src="images/blue_title.jpg" alt="블루 아카이브" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">블루 아카이브</h3>
+                    <p class="game-category">수집형 RPG</p>
+                </div>
+            </a>
+            <a href="#" class="game-card">
+                <img src="images/khazan_title.png" alt="퍼스트 버서커 : 카잔" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">퍼스트 버서커 : 카잔</h3>
+                    <p class="game-category">하드코어 액션 RPG</p>
+                </div>
+            </a>
+            <a href="#" class="game-card">
+                <img src="images/crazy_title.png" alt="크레이지 아케이드" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">크레이지 아케이드</h3>
+                    <p class="game-category">캐주얼</p>
+                </div>
+            </a>
+            <a href="#" class="game-card">
+                <img src="images/thefirst.png" alt="퍼스트 디센던트" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">퍼스트 디센던트</h3>
+                    <p class="game-category">루트슈터</p>
+                </div>
+            </a>
+            <a href="#" class="game-card">
+                <img src="images/maplem.png" alt="메이플스토리M" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">메이플스토리M</h3>
+                    <p class="game-category">RPG</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#" class="important">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+                <a href="#">회원탈퇴</a>
+                <a href="#">고객센터</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 로그인 관련 요소들
+            const userInfo = document.querySelector('.user-info');
+            const guestLinks = document.querySelector('.guest-links');
+            const userNickname = document.querySelector('.user-nickname');
+            const logoutButton = document.querySelector('.logout-button');
+
+            // 로그인 상태 관리 (요소가 존재할 때만 처리)
+            if (userInfo && guestLinks && userNickname) {
+                const loggedInUser = sessionStorage.getItem('loggedInUser');
+                
+                if (loggedInUser) {
+                    const user = JSON.parse(loggedInUser);
+                    userNickname.textContent = `${user.nickname}`;
+                    userInfo.style.display = 'flex';
+                    guestLinks.style.display = 'none';
+                } else {
+                    userInfo.style.display = 'none';
+                    guestLinks.style.display = 'flex';
+                }
+
+                // 로그아웃 처리
+                if (logoutButton) {
+                    logoutButton.addEventListener('click', () => {
+                        sessionStorage.removeItem('loggedInUser');
+                        userInfo.style.display = 'none';
+                        guestLinks.style.display = 'flex';
+                        window.location.reload();
+                    });
+                }
+            }
+
+            // 배너 슬라이더 기능
+            const bannerImages = document.querySelector('.banner-images');
+            const indicators = document.querySelectorAll('.indicator-item');
+
+            // 배너 관련 요소가 존재할 때만 슬라이더 기능 초기화
+            if (bannerImages && indicators.length > 0) {
+                let currentSlide = 0;
+                const totalSlides = indicators.length;
+                let isAnimating = false;
+
+                // 슬라이드 업데이트 함수
+                function updateSlide(newIndex, skipAnimation = false) {
+                    if (isAnimating && !skipAnimation) return;
+                    isAnimating = true;
+                    
+                    currentSlide = newIndex;
+                    
+                    // 이미지 슬라이드 이동
+                    bannerImages.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+                    
+                    // 인디케이터 업데이트
+                    indicators.forEach((indicator, index) => {
+                        const progress = indicator.querySelector('.indicator-progress');
+                        if (index === currentSlide) {
+                            indicator.classList.add('active');
+                            // 프로그레스 바 리셋 및 재시작
+                            if (progress) {
+                                progress.style.animation = 'none';
+                                progress.offsetHeight; // 리플로우 강제
+                                progress.style.animation = 'progress 5s linear forwards';
+                                
+                                // 프로그레스 바 애니메이션 완료 시 다음 슬라이드로 이동
+                                progress.addEventListener('animationend', function onAnimationEnd() {
+                                    progress.removeEventListener('animationend', onAnimationEnd);
+                                    if (!document.hidden) {
+                                        const nextSlideIndex = (currentSlide + 1) % totalSlides;
+                                        updateSlide(nextSlideIndex);
+                                    }
+                                }, { once: true });
+                            }
+                        } else {
+                            indicator.classList.remove('active');
+                            // 다른 프로그레스 바 리셋
+                            if (progress) {
+                                progress.style.animation = 'none';
+                            }
+                        }
+                    });
+
+                    // 트랜지션 완료 후 isAnimating 플래그 리셋
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 500);
+                }
+
+                // 인디케이터 클릭 이벤트
+                indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        if (currentSlide !== index) {
+                            updateSlide(index);
+                        }
+                    });
+                });
+
+                // 마우스가 배너 위에 있을 때 애니메이션 일시 정지
+                bannerImages.addEventListener('mouseenter', () => {
+                    const currentProgress = indicators[currentSlide].querySelector('.indicator-progress');
+                    if (currentProgress) {
+                        currentProgress.style.animationPlayState = 'paused';
+                    }
+                });
+
+                // 마우스가 배너를 벗어났을 때 애니메이션 재개
+                bannerImages.addEventListener('mouseleave', () => {
+                    const currentProgress = indicators[currentSlide].querySelector('.indicator-progress');
+                    if (currentProgress) {
+                        currentProgress.style.animationPlayState = 'running';
+                    }
+                });
+
+                // 페이지 숨김/표시 상태 변경 시 처리
+                document.addEventListener('visibilitychange', () => {
+                    const currentProgress = indicators[currentSlide].querySelector('.indicator-progress');
+                    if (currentProgress) {
+                        if (document.hidden) {
+                            currentProgress.style.animationPlayState = 'paused';
+                        } else {
+                            currentProgress.style.animationPlayState = 'running';
+                        }
+                    }
+                });
+
+                // 초기 슬라이드 설정
+                updateSlide(0, true);
+            }
+        });
+    </script>
+</body>
+</html> 

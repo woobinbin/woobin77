@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXON - 회원가입</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/signup-styles.css">
+</head>
+<body>
+    <div class="nexon-logo-wrapper">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo_nexon.png" alt="넥슨 로고">
+            </a>
+        </div>
+    </div>
+
+    <main class="signup-main">
+        <div class="signup-container">
+            <div class="signup-header">
+                <h1 class="signup-title">회원가입</h1>
+                <p class="signup-subtitle">넥슨 ID로 모든 넥슨 게임을 즐기세요!</p>
+            </div>
+            
+            <form class="signup-form" id="signupForm">
+                <div class="form-group">
+                    <label for="nickname">닉네임</label>
+                    <input type="text" id="nickname" name="nickname" required
+                        placeholder="사용하실 닉네임을 입력해주세요">
+                </div>
+
+                <div class="form-group">
+                    <label for="username">아이디</label>
+                    <div class="input-with-button">
+                        <input type="text" id="username" name="username" required
+                            placeholder="영문, 숫자 조합 6~12자">
+                        <button type="button" class="check-button" id="checkUsername">중복확인</button>
+                    </div>
+                    <div class="message" id="usernameMessage"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required
+                        placeholder="영문, 숫자, 특수문자 조합 8~16자">
+                    <div class="password-strength" id="passwordStrength">
+                        <div class="strength-bar"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">비밀번호 확인</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required
+                        placeholder="비밀번호를 다시 입력해주세요">
+                    <div class="message" id="passwordMessage"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <div class="input-with-button">
+                        <input type="email" id="email" name="email" required
+                            placeholder="이메일 주소 입력">
+                        <button type="button" class="verify-button" id="verifyEmail">인증하기</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">휴대폰 번호</label>
+                    <div class="input-with-button">
+                        <input type="tel" id="phone" name="phone" required
+                            placeholder="'-' 없이 입력">
+                        <button type="button" class="verify-button" id="verifyPhone">인증하기</button>
+                    </div>
+                </div>
+
+                <div class="agreements">
+                    <div class="agreement-all">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeAll">
+                            <span class="checkmark"></span>
+                            모든 약관에 동의합니다
+                        </label>
+                    </div>
+                    <div class="agreement-items">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agreements" required>
+                            <span class="checkmark"></span>
+                            [필수] 넥슨 서비스 이용약관
+                            <a href="#" class="view-terms">보기</a>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agreements" required>
+                            <span class="checkmark"></span>
+                            [필수] 개인정보 수집 및 이용
+                            <a href="#" class="view-terms">보기</a>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agreements">
+                            <span class="checkmark"></span>
+                            [선택] 이벤트 등 프로모션 알림 수신
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="signup-button">가입하기</button>
+            </form>
+
+            <div class="signup-footer">
+                <p>이미 계정이 있으신가요? <a href="login.html">로그인</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#" class="important">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+                <a href="#">고객센터</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/signup.js"></script>
+</body>
+</html> 

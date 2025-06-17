@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>던전앤파이터 캐릭터 검색 - NEXON</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/dungeon-styles.css">
+    <link rel="stylesheet" href="css/character-search.css">
+</head>
+<body class="game-page">
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo_nexon.png" alt="NEXON" class="logo">
+        </a>
+        <div class="auth-buttons">
+            <a href="signup.html">회원가입</a>
+            <a href="login.html">로그인</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-result-container">
+            <h2>캐릭터검색</h2>
+            <div class="search-form">
+                <div class="server-select">
+                    <select id="serverSelect">
+                        <option value="">전체 서버</option>
+                        <option value="시로코">시로코</option>
+                        <option value="프레이">프레이</option>
+                        <option value="카시야스">카시야스</option>
+                        <option value="디레지에">디레지에</option>
+                        <option value="카인">카인</option>
+                    </select>
+                </div>
+                <div class="character-search-input">
+                    <input type="text" id="characterName" placeholder="캐릭터명">
+                    <button type="button" class="search-button">검색</button>
+                </div>
+                <div class="search-tags">
+                    <span class="tag">최근 본 캐릭터</span>
+                    <span class="tag active">시로코 | 현상</span>
+                    <span class="tag">프레이 | 학현상</span>
+                    <button class="tag-remove">✕</button>
+                </div>
+            </div>
+
+            <div class="search-result">
+                <h3>현상 검색 결과 입니다.</h3>
+                <div class="character-list">
+                    <div class="character-card">
+                        <div class="character-image">
+                            <img src="images/dungeon_user1.png" alt="캐릭터 이미지">
+                        </div>
+                        <div class="character-info">
+                            <div class="level">Lv.115</div>
+                            <div class="name">현상</div>
+                            <div class="class">
+                                <span class="server">웨폰마스터</span>
+                                <span class="job">카인</span>
+                            </div>
+                            <div class="fame">
+                                <img src="images/fame_icon.png" alt="명성" class="fame-icon">
+                                41,606
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card">
+                        <div class="character-image">
+                            <img src="images/dungeon_user2.png" alt="캐릭터 이미지">
+                        </div>
+                        <div class="character-info">
+                            <div class="level">Lv.115</div>
+                            <div class="name">현상</div>
+                            <div class="class">
+                                <span class="server">아수라</span>
+                                <span class="job">디레지에</span>
+                            </div>
+                            <div class="fame">
+                                <img src="images/fame_icon.png" alt="명성" class="fame-icon">
+                                31,520
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card">
+                        <div class="character-image">
+                            <img src="images/dungeon_user3.png" alt="캐릭터 이미지">
+                        </div>
+                        <div class="character-info">
+                            <div class="level">Lv.115</div>
+                            <div class="name">현상</div>
+                            <div class="class">
+                                <span class="server">비질란테</span>
+                                <span class="job">시로코</span>
+                            </div>
+                            <div class="fame">
+                                <img src="images/fame_icon.png" alt="명성" class="fame-icon">
+                                64,520
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#" class="important">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+                <a href="#">게임이용등급</a>
+                <a href="#">고객센터</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const serverSelect = document.getElementById('serverSelect');
+            const characterList = document.querySelector('.character-list');
+            const searchResult = document.querySelector('.search-result');
+            const tagRemoveBtn = document.querySelector('.tag-remove');
+            const searchTags = document.querySelector('.search-tags');
+            const characterCards = document.querySelectorAll('.character-card');
+            const MAX_TAGS = 3;
+
+            // 서버별 캐릭터 필터링
+            function filterCharacters(server) {
+                let hasCharacters = false;
+                characterCards.forEach(card => {
+                    const cardServer = card.querySelector('.job').textContent;
+                    if (!server || cardServer === server) {
+                        card.style.display = 'block';
+                        hasCharacters = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // 검색 결과 메시지 업데이트
+                const resultMessage = searchResult.querySelector('h3');
+                if (!hasCharacters && server) {
+                    resultMessage.textContent = `${server} 서버의 캐릭터가 존재하지 않습니다.`;
+                    characterList.style.display = 'none';
+                } else {
+                    resultMessage.textContent = server ? 
+                        `${server} 서버 검색 결과입니다.` : 
+                        '현상 검색 결과 입니다.';
+                    characterList.style.display = 'grid';
+                }
+            }
+
+            // 태그 관리 기능
+            function manageRecentTags(server, nickname) {
+                const recentTag = searchTags.querySelector('.tag'); // "최근 본 캐릭터" 태그
+                const existingTags = Array.from(searchTags.querySelectorAll('.tag:not(:first-child)'));
+                const newTagText = `${server} | ${nickname}`;
+
+                // 이미 동일한 태그가 있는지 확인
+                const duplicateTag = existingTags.find(tag => tag.textContent === newTagText);
+                if (duplicateTag) {
+                    return; // 중복된 태그는 추가하지 않음
+                }
+
+                // 새 태그 생성
+                const newTag = document.createElement('span');
+                newTag.className = 'tag';
+                newTag.textContent = newTagText;
+
+                // 태그 개수가 최대치에 도달한 경우 가장 오래된 태그 제거
+                if (existingTags.length >= MAX_TAGS) {
+                    existingTags[0].remove();
+                }
+
+                // 새 태그 추가
+                searchTags.appendChild(newTag);
+                tagRemoveBtn.style.display = 'block';
+
+                // 태그 배열 업데이트
+                tags = Array.from(searchTags.querySelectorAll('.tag:not(:first-child)'));
+            }
+
+            // 캐릭터 카드 클릭 이벤트
+            characterCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const server = card.querySelector('.job').textContent;
+                    const nickname = card.querySelector('.name').textContent;
+                    manageRecentTags(server, nickname);
+                });
+            });
+
+            // 서버 선택 이벤트
+            serverSelect.addEventListener('change', (e) => {
+                filterCharacters(e.target.value);
+            });
+
+            // 태그 제거 기능
+            let tags = Array.from(searchTags.querySelectorAll('.tag:not(:first-child)'));
+            tagRemoveBtn.addEventListener('click', () => {
+                const lastTag = tags[tags.length - 1];
+                if (lastTag) {
+                    lastTag.remove();
+                    tags = tags.slice(0, -1);
+                    
+                    // 모든 태그가 제거되었을 때 제거 버튼 숨기기
+                    if (tags.length === 0) {
+                        tagRemoveBtn.style.display = 'none';
+                    }
+                }
+            });
+
+            // 초기 상태에서 태그가 없으면 제거 버튼 숨기기
+            if (tags.length === 0) {
+                tagRemoveBtn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,312 @@
+/* 로그인 페이지 메인 스타일 */
+.login-main {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--nexon-light-gray);
+}
+
+/* 넥슨 로고 스타일 */
+.nexon-logo-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 35px;
+    width: auto;
+}
+
+.login-container {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.elsword-logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* 로그인 폼 스타일 */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--nexon-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 117, 255, 0.1);
+}
+
+/* 로그인 옵션 스타일 */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--nexon-gray);
+}
+
+.remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.remember-me input[type="checkbox"]:checked {
+    background-color: var(--nexon-blue);
+    border-color: var(--nexon-blue);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.secure-login {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--nexon-gray);
+}
+
+.security-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+}
+
+/* 로그인 버튼 스타일 */
+.login-button {
+    background-color: var(--nexon-blue);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0052cc;
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* 로그인 링크 스타일 */
+.login-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.login-links a {
+    color: var(--nexon-gray);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-links a:hover {
+    color: var(--nexon-blue);
+}
+
+.divider {
+    color: #ddd;
+}
+
+/* 소셜 로그인 스타일 */
+.social-login {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+/* QR 로그인 스타일 */
+.qr-login {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.qr-login h3 {
+    color: var(--nexon-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.qr-code {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+}
+
+.qr-guide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--nexon-gray);
+    font-size: 0.85rem;
+}
+
+.mobile-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+}
+
+.social-login h3 {
+    text-align: center;
+    color: var(--nexon-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+    color: var(--nexon-dark);
+}
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-button:hover {
+    background-color: #f8f8f8;
+}
+
+.social-button.google:hover {
+    border-color: #4285f4;
+}
+
+.social-button.facebook:hover {
+    border-color: #1877f2;
+}
+
+.social-button.naver:hover {
+    border-color: #03c75a;
+}
+
+.social-button.apple:hover {
+    border-color: #000;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+
+    .nexon-logo-wrapper {
+        padding: 0.8rem 1rem;
+    }
+
+    .logo-container img {
+        height: 30px;
+    }
+
+    .login-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .login-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .social-button {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+} 

@@ -1,0 +1,738 @@
+/* 전역 스타일 */
+:root {
+    --dnf-red: #ff3333;
+    --dnf-dark: #1a1a1a;
+    --dnf-gray: #666;
+    --dnf-light-gray: #333;
+    --dnf-gold: #ffd700;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    z-index: 1000;
+    height: 100px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nexon-logo {
+    height: 35px;
+    width: auto;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #333;
+}
+
+.guest-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.guest-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+.guest-links .signup-link {
+    color: #333;
+}
+
+.guest-links .login-link {
+    border: 1px solid #1a75ff;
+    color: #1a75ff;
+}
+
+.guest-links .login-link:hover {
+    background-color: #1a75ff;
+    color: white;
+}
+
+/* 넥슨 로고 영역 */
+.nexon-logo-wrapper {
+    background-color: white;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.logo-container img {
+    height: 50px;
+    width: auto;
+}
+
+.auth-links {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.auth-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    padding-right: 3rem;
+}
+
+/* 헤더 */
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid var(--dnf-red);
+    padding: 1rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* 네비게이션 */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #666;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dnf-red);
+}
+
+.has-dropdown.active {
+    color: var(--dnf-red);
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    padding: 1rem 0;
+    z-index: 100;
+    opacity: 0.5;
+}
+
+nav ul li:hover .dropdown-container {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 게임 시작 버튼 */
+.cta-button {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.game-start-btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.game-start-btn:hover {
+    background-color: rgb(11, 133, 255);
+}
+
+/* 히어로 배너 */
+.hero-banner {
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 뉴스 섹션 */
+.news-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+}
+
+.banner-sliders-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.banner-slider {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.banner-slider:first-child {
+    width: 560px;
+    height: 280px;
+}
+
+.banner-slider:last-child {
+    width: 300px;
+    height: 280px;
+}
+
+.slider-container {
+    position: relative;
+    height: 100%;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+    position: relative;
+    height: 100%;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  
+}
+
+.banner-category {
+    display: inline-block;
+    background-color: var(--dnf-red);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-tabs {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.tab-header h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.more-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.category {
+    background-color: #2eaf00;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.title {
+    flex: 1;
+    color: #666;
+}
+
+.date {
+    color: var(--dnf-gray);
+    font-size: 0.9rem;
+}
+
+/* 캐릭터 섹션 */
+.character-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    background-color: #272626;
+    border-radius: 8px;
+}
+
+.character-section h2 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.character-showcase {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+}
+
+.main-character {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.character-info {
+    padding: 1rem;
+}
+
+.character-info h3 {
+    color: var(--dnf-red);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.character-info p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.character-stats {
+    margin-top: 2rem;
+}
+
+.stat {
+    margin-bottom: 1rem;
+}
+
+.stat span {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: var(--dnf-gold);
+}
+
+.stat-bar {
+    height: 4px;
+    background-color: var(--dnf-red);
+    transition: width 0.3s;
+}
+
+.character-thumbnails {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.thumbnail.active {
+    border-color: var(--dnf-red);
+}
+
+/* 푸터 */
+footer {
+    background-color: #000;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--dnf-gray);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-links a.important {
+    color: var(--dnf-red);
+}
+
+.copyright {
+    color: var(--dnf-gray);
+    font-size: 0.8rem;
+}
+
+/* 가이드&추천글 섹션 */
+.guide-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.guide-section h2 {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.guide-cards {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.guide-card {
+    flex: 1;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-title {
+    color: var(--dnf-red);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    height: 4.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.card-category {
+    display: inline-block;
+    background-color: #2eaf00;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-author {
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.card-stats {
+    color: var(--dnf-gray);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* 검색 컨테이너 스타일 */
+.search-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #e0e5e9;
+    border-radius: 8px;
+}
+
+.search-box {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.search-box h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--dnf-red);
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    opacity: 1;
+}
+
+/* 검색 결과 */
+.search-result h3 {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 1024px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+
+    .character-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .character-thumbnails {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .cta-button {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-container {
+        position: static;
+    }
+
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .guide-cards {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nexon-logo-wrapper {
+        padding: 0.5rem;
+    }
+
+    .guest-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .character-thumbnails {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* 검색 폼 배경색 수정 */
+.search-form {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* 캐릭터 카드 배경색 수정 */
+.character-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+/* 가이드 카드 배경색 수정 */
+.guide-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.search-result-container h2 {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.name {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+} 

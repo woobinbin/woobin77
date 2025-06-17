@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXON - 엘소드 아이템 검색</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/elsword-styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo_nexon.png" alt="NEXON" class="nexon-logo">
+                </a>
+            </div>
+            <nav class="header-nav">
+                <div class="user-info" style="display: none;">
+                    <span class="user-nickname"></span>
+                    <span class="security-status">
+                        <img src="images/security.png" alt="보안" class="security-icon">
+                    </span>
+                    <button class="logout-button">로그아웃</button>
+                </div>
+                <div class="guest-links">
+                    <a href="signup.html" class="signup-link">회원가입</a>
+                    <a href="login.html" class="login-link">로그인</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="item-search-results-page">
+            <h1 class="page-title">아이템 검색 결과</h1>
+            <div class="item-search-filters">
+                <div class="item-category-filters">
+                    <button class="item-category-btn active" data-category="all">전체</button>
+                    <button class="item-category-btn" data-category="코스튬">코스튬</button>
+                    <button class="item-category-btn" data-category="악세서리">악세서리</button>
+                    <button class="item-category-btn" data-category="스킨">스킨</button>
+                    <button class="item-category-btn" data-category="가열기">가열기</button>
+                </div>
+            </div>
+            <div class="item-search-summary">
+                <p><span id="item-result-count">0</span>개의 검색결과</p>
+            </div>
+            <div class="items-grid" id="item-search-results">
+                <!-- 검색 결과가 여기에 동적으로 표시됩니다 -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/elsword_item_search.js"></script>
+</body>
+</html> 

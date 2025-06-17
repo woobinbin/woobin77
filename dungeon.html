@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>던전앤파이터 - NEXON</title>
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/dungeon-styles.css">
+</head>
+<body class="game-page">
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo_nexon.png" alt="NEXON" class="logo">
+        </a>
+        <div class="auth-buttons">
+            <a href="signup.html">회원가입</a>
+            <a href="login.html">로그인</a>
+        </div>
+    </header>
+    
+    <div class="game-header">
+        <div class="game-header-container">
+            <div class="game-logo">
+                <a href="dungeon.html">
+                    <img src="images/dungeon_logo.png" alt="던전앤파이터 로고">
+                </a>
+            </div>
+            <nav class="game-nav">
+                <ul>
+                    <li class="nav-item has-dropdown active" data-category="news">
+                        <a href="#">게임소식</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">업데이트</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">패치노트</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown active" data-category="game-info">
+                        <a href="#">게임정보</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">게임소개</a></li>
+                            <li><a href="#">캐릭터정보</a></li>
+                            <li><a href="#">아이템정보</a></li>
+                            <li><a href="#">게임가이드</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown active" data-category="community">
+                        <a href="#">커뮤니티</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">팁과노하우</a></li>
+                            <li><a href="#">창작게시판</a></li>
+                            <li><a href="#">거래게시판</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown active" data-category="media">
+                        <a href="#">미디어</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">스크린샷</a></li>
+                            <li><a href="#">동영상</a></li>
+                            <li><a href="#">음악</a></li>
+                            <li><a href="#">배경화면</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown active" data-category="customer">
+                        <a href="#">고객지원</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">버그신고</a></li>
+                            <li><a href="#">제재내역</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cta-button">
+                <a href="#" class="game-start-btn">게임시작</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-banner">
+            <div class="banner-content">
+                <img src="images/banner.jpg" alt="던전앤파이터 배너" class="banner-image">
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="news-container">
+                <div class="news-tabs">
+                    <div class="tab-header">
+                        <h2>공지사항 <a href="elsword_notice.html"><img src="images/add.png" alt="더보기" class="more-icon"></a></h2>
+                        <div class="news-list">
+                            <div class="news-item">
+                                <span class="category">이벤트</span>
+                                <span class="title">2024 봄맞이 이벤트</span>
+                                <span class="date">2024.03.21</span>
+                            </div>
+                            <div class="news-item">
+                                <span class="category">업데이트</span>
+                                <span class="title">신규 레이드 업데이트 안내</span>
+                                <span class="date">2024.03.20</span>
+                            </div>
+                            <div class="news-item">
+                                <span class="category">점검</span>
+                                <span class="title">정기 점검 안내</span>
+                                <span class="date">2024.03.19</span>
+                            </div>
+                            <div class="news-item">
+                                <span class="category">이벤트</span>
+                                <span class="title">신규 캐릭터 사전 생성</span>
+                                <span class="date">2024.03.18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-sliders-container">
+                    <div class="banner-slider">
+                        <div class="slider-container">
+                            <div class="slider-track">
+                                <div class="slider-item">
+                                    <img src="images/dungeon_item_banner1.jpg" alt="배너 1">
+                                   
+                                </div>
+                                <div class="slider-item">
+                                    <img src="images/dungeon_item_banner2.jpg" alt="배너 2">
+                                  
+                                </div>
+                            </div>
+                            <div class="slider-indicators">
+                                <span class="indicator active"></span>
+                                <span class="indicator"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="banner-slider">
+                        <div class="slider-container">
+                            <div class="slider-track">
+                                <div class="slider-item">
+                                    <img src="images/dungeon_item_banner2.jpg" alt="배너 3">
+                                
+                                </div>
+                                <div class="slider-item">
+                                    <img src="images/dungeon_guide3.png" alt="배너 4">
+                                  
+                                </div>
+                            </div>
+                            <div class="slider-indicators">
+                                <span class="indicator active"></span>
+                                <span class="indicator"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>가이드 & 추천글 <img src="images/add.png" alt="더보기" class="more-icon"></h2>
+            <div class="guide-cards">
+                <div class="guide-card">
+                    <div class="card-header">
+                    
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">커뮤니티</span>
+                        <h3 class="card-title">안정적이고 빠른 숙련자 기준 나벨 일반<br>30/400(~50/450) 전체 빌드 & 공대장 상황판단/<br>오더 방법(+영상첨)</h3>
+                        <img src="images/dungeon_guide1.jpg" alt="다크엠블럭 가이드" class="card-image">
+                        <div class="card-author">
+                            <span>달달한잼이다</span>
+                        </div>
+                        <div class="card-stats">
+                            조회수 2555 | 추천 130 | 댓글 1145
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="card-header">
+                    
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">커뮤니티</span>
+                        <h3 class="card-title">전직업 스킬개화 총정리</h3>
+                        <img src="images/dungeon_guide2.png" alt="메덱 가이드" class="card-image">
+                        <div class="card-author">
+                            <span>라핌모시</span>
+                        </div>
+                        <div class="card-stats">
+                            조회수 1845 | 추천 95 | 댓글 234
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="card-header">
+                       
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">커뮤니티</span>
+                        <h3 class="card-title">퍼스트서버 엘레멘탈 바머 스킬VP/개화 간단히 분석해보기</h3>
+                        <img src="images/dungeon_guide3.png" alt="던전 공략" class="card-image">
+                        <div class="card-author">
+                            <span>피디대정령</span>
+                        </div>
+                        <div class="card-stats">
+                            조회수 3242 | 추천 189 | 댓글 567
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-container">
+            <div class="search-box">
+                <h3>정보 검색</h3>
+                <div class="search-input-container">
+                    <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+                    <button class="search-button">
+                        <img src="images/search.png" alt="검색" class="search-icon">
+                    </button>
+                </div>
+            </div>
+            <div class="search-box">
+                <h3>캐릭터 검색</h3>
+                <div class="search-input-container">
+                    <input type="text" class="search-input" id="characterSearchInput" placeholder="캐릭터명을 입력하세요">
+                    <button class="search-button" id="characterSearchBtn">
+                        <img src="images/search.png" alt="검색" class="search-icon">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="character-section">
+            <h2>직업 소개 <img src="images/add.png" alt="더보기" class="more-icon"></h2>
+            <div class="character-showcase">
+                <img src="images/dungeon_ch1.PNG" alt="비질란테" class="main-character">
+                <div class="character-info">
+                    <h3>비질란테</h3>
+                    <p>요기를 받아들여 요수화가 가능해진 궁수</p>
+                    <div class="character-stats">
+                        <div class="stat">
+                            <span>공격력</span>
+                            <div class="stat-bar" data-value="95"></div>
+                        </div>
+                        <div class="stat">
+                            <span>방어력</span>
+                            <div class="stat-bar" data-value="60"></div>
+                        </div>
+                        <div class="stat">
+                            <span>기술력</span>
+                            <div class="stat-bar" data-value="90"></div>
+                        </div>
+                        <div class="stat">
+                            <span>난이도</span>
+                            <div class="stat-bar" data-value="85"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-thumbnails">
+                    <img src="images/dungeon_ch1.PNG" alt="비질란테" class="thumbnail active">
+                    <img src="images/dungeon_ch2.png" alt="뮤즈" class="thumbnail">
+                    <img src="images/dungeon_ch3.png" alt="엘리멘탈 마스터" class="thumbnail">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#" class="important">개인정보처리방침</a>
+                <a href="#">청소년보호정책</a>
+                <a href="#">게임이용등급</a>
+                <a href="#">고객센터</a>
+            </div>
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 캐릭터 검색 기능
+            const characterSearchInput = document.getElementById('characterSearchInput');
+            const characterSearchBtn = document.getElementById('characterSearchBtn');
+
+            if (characterSearchInput && characterSearchBtn) {
+                function performCharacterSearch() {
+                    const searchTerm = characterSearchInput.value.trim();
+                    if (searchTerm) {
+                        console.log('검색어:', searchTerm); // 디버깅용
+                        window.location.href = 'character-search.html?search=' + encodeURIComponent(searchTerm);
+                    }
+                }
+
+                // 검색 버튼 클릭 이벤트
+                characterSearchBtn.onclick = function(e) {
+                    e.preventDefault();
+                    performCharacterSearch();
+                };
+
+                // Enter 키 입력 이벤트
+                characterSearchInput.onkeypress = function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        performCharacterSearch();
+                    }
+                };
+            }
+
+            // 캐릭터 정보 데이터
+            const characters = {
+                '비질란테': {
+                    description: '요기를 받아들여 요수화가 가능해진 궁수',
+                    stats: { attack: 95, defense: 60, skill: 90, difficulty: 85 }
+                },
+                '뮤즈': {
+                    description: '선현궁 연주로 아군의 사기를 북돋우는 궁수',
+                    stats: { attack: 100, defense: 45, skill: 95, difficulty: 75 }
+                },
+                '엘리멘탈 마스터': {
+                    description: '4가지 속성의 원소 마법을 고르게 연구한 마법사',
+                    stats: { attack: 70, defense: 65, skill: 100, difficulty: 80 }
+                }
+            };
+
+            // 캐릭터 썸네일 기능
+            const thumbnails = document.querySelectorAll('.character-thumbnails .thumbnail');
+            const mainCharacter = document.querySelector('.main-character');
+            const characterInfo = document.querySelector('.character-info');
+
+            if (thumbnails.length > 0 && mainCharacter && characterInfo) {
+                thumbnails.forEach(thumb => {
+                    thumb.addEventListener('click', () => {
+                        // 활성 썸네일 변경
+                        thumbnails.forEach(t => t.classList.remove('active'));
+                        thumb.classList.add('active');
+
+                        // 메인 이미지 변경
+                        mainCharacter.src = thumb.src;
+                        mainCharacter.alt = thumb.alt;
+
+                        // 캐릭터 정보 업데이트
+                        const charName = thumb.alt;
+                        const char = characters[charName];
+                        if (char) {
+                            const titleElement = characterInfo.querySelector('h3');
+                            const descElement = characterInfo.querySelector('p');
+                            const statBars = characterInfo.querySelectorAll('.stat-bar');
+                            
+                            if (titleElement) titleElement.textContent = charName;
+                            if (descElement) descElement.textContent = char.description;
+                            
+                            if (statBars.length >= 4) {
+                                statBars[0].style.width = char.stats.attack + '%';
+                                statBars[1].style.width = char.stats.defense + '%';
+                                statBars[2].style.width = char.stats.skill + '%';
+                                statBars[3].style.width = char.stats.difficulty + '%';
+                            }
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
+    <script src="js/common.js"></script>
+</body>
+</html> 
