@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signupForm');
+    const name =document.getElementById('name');
     const username = document.getElementById('username');
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
@@ -117,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 폼 데이터 수집
         const formData = {
+            name: document.getElementById('name').value,
             nickname: document.getElementById('nickname').value,
             username: username.value,
             password: password.value,

@@ -1,3 +1,4 @@
+
 /* 검색 결과 컨테이너 */
 .search-result-container {
     max-width: 1200px;
@@ -5,10 +6,25 @@
     padding: 0 2rem;
 }
 
+.header-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-logo{
+    position: absolute;
+    left: 0;
+}
+
 .search-result-container h2 {
-    color: var(--dnf-gold);
+    color: #333;
     margin-bottom: 2rem;
     font-size: 1.5rem;
+    text-align: center;
+    
 }
 
 /* 검색 폼 */
@@ -91,9 +107,13 @@
 
 /* 검색 결과 */
 .search-result h3 {
-    color: #fff;
+    color: #333;
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px 0;
 }
 
 .character-list {

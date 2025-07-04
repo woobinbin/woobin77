@@ -6,6 +6,7 @@
     <title>엘소드 공지사항</title>
     <link rel="stylesheet" href="css/nexon-styles.css">
     <link rel="stylesheet" href="css/elsword-styles.css">
+    <script src="js/auth.js"></script>
     <style>
         .notice-tabs {
             display: flex;
@@ -96,6 +97,12 @@
         <a href="index.html">
             <img src="images/logo_nexon.png" alt="NEXON" class="logo">
         </a>
+
+        <div class="user-info" style="display: none;">
+    <span>안녕하세요, <span class="user-nickname"></span>님!</span>
+    <button class="logout-button">로그아웃</button>
+</div>
+
         <div class="auth-buttons">
             <a href="signup.html">회원가입</a>
             <a href="login.html">로그인</a>
