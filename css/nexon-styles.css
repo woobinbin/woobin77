@@ -48,6 +48,39 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.user-info {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+    align-items: center;
+}
+
+.user-info span {
+    font-size: 14px;
+    color: #666;
+}
+
+.logout-button {
+    border: 1px solid #1a75ff;
+    color: #1a75ff;
+    border-radius: 4px;
+    background: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.logout-button:hover {
+    background-color: #1a75ff;
+    color: white;
+}
+
 .auth-buttons {
     position: absolute;
     top: 50%;
