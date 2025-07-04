@@ -112,9 +112,11 @@
                 <div class="banner-slider">
                     <img src="images/elsword_banner.png" alt="엘소드 배너 1" class="banner-image">
                     <img src="images/elsword_banner2.jpg" alt="엘소드 배너 2" class="banner-image">
+                    <img src="images/elsword_banner3.png" alt="엘소드 배너 3" class="banner-image">
                 </div>
                 <div class="banner-indicators">
                     <span class="indicator active"></span>
+                    <span class="indicator"></span>
                     <span class="indicator"></span>
                 </div>
             </div>
@@ -505,12 +507,12 @@
             const bannerSlider = document.querySelector('.banner-slider');
             const indicators = document.querySelectorAll('.indicator');
             let currentSlide = 0;
-            const totalSlides = 2;
+            const totalSlides = indicators.length;
             let slideInterval;
 
             // 슬라이드 업데이트 함수
             function updateSlide() {
-                bannerSlider.style.transform = `translateX(-${currentSlide * 50}%)`;
+                bannerSlider.style.transform = `translateX(-${currentSlide * 33.333}%)`;
                 indicators.forEach((indicator, index) => {
                     if (index === currentSlide) {
                         indicator.classList.add('active');
@@ -540,7 +542,7 @@
                     startSlideTimer();
                 });
             });
-
+            updateSlide();
             // 초기 슬라이드 타이머 시작
             startSlideTimer();
         });
