@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const rememberCheck = document.getElementById('remember');
     const socialButtons = document.querySelectorAll('.social-button');
 
+    checkPasswordResetNotification();
+
     // 저장된 아이디가 있다면 불러오기
     const savedUsername = localStorage.getItem('rememberedUsername');
     if (savedUsername) {
@@ -66,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 // 소셜 로그인 처리
 function handleSocialLogin(provider) {
     // TODO: 실제 소셜 로그인 API 연동
@@ -124,4 +127,77 @@ if (qrContainer) {
     }
 
     qrCheckInterval = setInterval(checkQRLogin, 3000);
+
 } 
+
+ function checkPasswordResetNotification() {
+    const tempUserData = JSON.parse(localStorage.getItem('tempUserData') || '{}');
+    
+    if (tempUserData.username && tempUserData.timestamp) {
+        const timeDiff = Date.now() - tempUserData.timestamp;
+        
+        // 5분 이내의 비밀번호 재설정인지 확인
+        if (timeDiff < 5 * 60 * 1000) {
+            // 💡 수정: usernameInput 요소를 안전하게 찾기
+            const usernameInput = document.getElementById('username') || document.querySelector('input[name="username"]');
+            
+            if (usernameInput) {
+                // 사용자 아이디 자동 입력
+                usernameInput.value = tempUserData.username;
+                
+                // 성공 메시지 표시
+                showNotification('비밀번호가 성공적으로 재설정되었습니다!', 'success');
+                
+                console.log('비밀번호 재설정 알림 표시:', tempUserData.username);
+            } else {
+                console.warn('username 입력 필드를 찾을 수 없습니다.');
+            }
+            
+            // tempUserData 정리
+            localStorage.removeItem('tempUserData');
+        }
+    }
+}
+
+// 알림 표시 함수 (없다면 추가)
+function showNotification(message, type = 'info') {
+    // 기존 알림 제거
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // 새 알림 생성
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'success' ? '#4CAF50' : '#f44336'};
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+    `;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    // 3초 후 자동 제거
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+// CSS 애니메이션 추가
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+`;
+document.head.appendChild(style);
