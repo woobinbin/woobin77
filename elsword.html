@@ -113,11 +113,14 @@
                     <img src="images/elsword_banner.png" alt="엘소드 배너 1" class="banner-image">
                     <img src="images/elsword_banner2.jpg" alt="엘소드 배너 2" class="banner-image">
                     <img src="images/elsword_banner3.png" alt="엘소드 배너 3" class="banner-image">
+                    <img src="images/elsword_banner4.jpg" alt="엘소드 배너 4" class="banner-image">
+                    
                 </div>
                 <div class="banner-indicators">
                     <span class="indicator active"></span>
                     <span class="indicator"></span>
                     <span class="indicator"></span>
+                     <span class="indicator"></span>
                 </div>
             </div>
         </section>
@@ -504,47 +507,68 @@
             }
 
             // 배너 슬라이드 기능
-            const bannerSlider = document.querySelector('.banner-slider');
-            const indicators = document.querySelectorAll('.indicator');
-            let currentSlide = 0;
-            const totalSlides = indicators.length;
-            let slideInterval;
+    const bannerSlider = document.querySelector('.banner-slider');
+const indicators = document.querySelectorAll('.indicator');
+let currentSlide = 0;
+const totalSlides = 4;
+let slideInterval;
 
-            // 슬라이드 업데이트 함수
-            function updateSlide() {
-                bannerSlider.style.transform = `translateX(-${currentSlide * 33.333}%)`;
-                indicators.forEach((indicator, index) => {
-                    if (index === currentSlide) {
-                        indicator.classList.add('active');
-                    } else {
-                        indicator.classList.remove('active');
-                    }
-                });
-            }
 
-            // 다음 슬라이드로 이동
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateSlide();
-            }
+console.log('totalSlides:', totalSlides);
+console.log('indicators.length:', indicators.length);
+console.log('banner images:', document.querySelectorAll('.banner-image').length);
 
-            // 자동 슬라이드 시작
-            function startSlideTimer() {
-                slideInterval = setInterval(nextSlide, 5000); // 5초마다 슬라이드 변경
-            }
+function updateSlide() {
+    console.log('currentSlide:', currentSlide);
+    console.log('translateX value:', -currentSlide * 25 + '%');
+    
+    bannerSlider.style.transform = `translateX(-${currentSlide * 25}%)`;
+    
+    indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+            indicator.classList.add('active');
+        } else {
+            indicator.classList.remove('active');
+        }
+    });
+}
 
-            // 인디케이터 클릭 이벤트
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    clearInterval(slideInterval);
-                    currentSlide = index;
-                    updateSlide();
-                    startSlideTimer();
-                });
-            });
-            updateSlide();
-            // 초기 슬라이드 타이머 시작
-            startSlideTimer();
+// 슬라이드 업데이트 함수
+function updateSlide() {
+    bannerSlider.style.transform = `translateX(-${currentSlide * 25}%)`;
+    
+    indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+            indicator.classList.add('active');
+        } else {
+            indicator.classList.remove('active');
+        }
+    });
+}
+
+// 다음 슬라이드로 이동
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlide();
+}
+
+// 자동 슬라이드 시작
+function startSlideTimer() {
+    slideInterval = setInterval(nextSlide, 5000);
+}
+
+// 인디케이터 클릭 이벤트
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        currentSlide = index;
+        updateSlide();
+        startSlideTimer();
+    });
+});
+
+updateSlide();
+startSlideTimer();
         });
     </script>
 </body>

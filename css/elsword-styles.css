@@ -386,14 +386,14 @@ body {
 }
 
 .banner-slider {
-    width: 300%; /* 3개 이미지 × 100% = 300% */
+    width: 400%; /* 4개 이미지 × 100% = 400% */
     height: 100%;
     display: flex;
     transition: transform 0.8s ease-in-out; /* 0.5s → 0.8s로 더 부드럽게 */
 }
 
 .banner-image {
-    width: 33.333%; /* 300% ÷ 3 = 33.333% */
+    width: calc(100% / 4);
     height: 100%;
     object-fit: cover;
     flex-shrink: 0;

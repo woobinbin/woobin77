@@ -167,27 +167,64 @@ let currentStep = 1;
         }
 
         function checkPasswordRequirements() {
-            const password = document.getElementById('newPassword').value;
-            const requirements = {
-                length: password.length >= 8,
-                uppercase: /[A-Z]/.test(password),
-                lowercase: /[a-z]/.test(password),
-                number: /[0-9]/.test(password),
-                special: /[!@#$%^&*(),.?":{}|<>]/.test(password)
-            };
+            const password = document.getElementById('newPassword')?.value || '';
+            console.log('검증 중인 비밀번호:', password);
+
+    const requirements = [
+        { id: 'req-length', regex: /^.{6,12}$/, text: '6자 이상 12자 이하' },
+        { id: 'req-lowercase', regex: /[a-z]/, text: '소문자 포함' },
+        { id: 'req-number', regex: /[0-9]/, text: '숫자 포함' },
+        { id: 'req-special', regex: /[!@#$%^&*(),.?":{}|<>]/, text: '특수문자 포함' }
+    ];
+    
+    let allMet = true;
+    
+    // 각 요구사항 확인
+    requirements.forEach(req => {
+        const element = document.getElementById(req.id);
+        if (element) {
+            const isValid = req.regex.test(password);
             
-            Object.keys(requirements).forEach(req => {
-                const element = document.getElementById(`req-${req}`);
-                if (requirements[req]) {
-                    element.classList.add('valid');
-                    element.classList.remove('invalid');
-                } else {
-                    element.classList.add('invalid');
-                    element.classList.remove('valid');
-                }
-            });
-            
-            checkPasswordMatch();
+            if (isValid) {
+                element.classList.remove('invalid');
+                element.classList.add('valid');
+                element.style.color = '#28a745'; // 초록색
+            } else {
+                element.classList.remove('valid');
+                element.classList.add('invalid');
+                element.style.color = '#dc3545'; // 빨간색
+                allMet = false;
+            }
+        }
+    });
+    
+    // 완료 버튼 활성화/비활성화
+    const submitButton = document.getElementById('resetPasswordBtn');
+    if (submitButton) {
+        submitButton.disabled = !allMet;
+    }
+    
+    return allMet;
+}
+
+function checkPasswordMatch() {
+    const password = document.getElementById('newPassword')?.value || '';
+    const confirmPassword = document.getElementById('confirmPassword')?.value || '';
+    
+    const passwordsMatch = password === confirmPassword && password.length > 0;
+    
+    // 비밀번호 일치 여부를 시각적으로 표시하고 싶다면
+    // HTML에 일치 확인용 요소를 추가해야 합니다
+    
+    // 완료 버튼은 비밀번호 요구사항과 일치 여부 모두 확인
+    const allRequirementsMet = checkPasswordRequirements();
+    const submitButton = document.getElementById('resetPasswordBtn');
+    
+    if (submitButton) {
+        submitButton.disabled = !(allRequirementsMet && passwordsMatch);
+    }
+    
+    return passwordsMatch;
         }
 
         function checkPasswordMatch() {
