@@ -2,6 +2,9 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
     box-sizing: border-box;
 }
 
@@ -266,6 +269,182 @@ body {
     font-weight: 500;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* 추천 게임 목록 */
+
+.best-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.best-content>h1{
+    margin-top: 70px;
+}
+
+.best-category{
+    height: 18px;
+    margin: 5px 0 25px 3px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #00cec6;
+}
+
+.btn{
+    position: absolute;
+    right: 0;
+    top: 52px;
+    
+}
+
+.btn>a{
+    margin-left: 10px;
+}
+
+.btn>a:hover{
+    color: #1a75ff;
+}
+
+.best-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.best-game{
+    width: 644px;
+    height: 342px;
+    display: flex;
+}
+
+.best-game-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-card{
+    position: relative;
+    width: 153px;
+    height: 342px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+.best-card:first-child{
+    margin-left: 0;
+}
+
+.best-card-img{
+    display: block;
+    width: 153px;
+    height: 192px;
+    overflow: hidden;
+    transition: all .15s linear, bottom 0s;
+}
+
+.best-card-img>img{
+    width: 100%;
+}
+
+.best-card-category{
+    background-color: #00dbd3;
+    display: block;
+    width: 32px;
+    height: 16px;
+    margin: 16px 0 0 12px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0;
+    font: 10px Malgun Gothic;
+    font-weight: 700;
+    line-height: 16px;
+    border-radius: 20px;
+}
+
+.best-card-title{
+    width: 129px;
+    height: 36px;
+    margin: 8px 0 4px 12px;
+    font-size: 14px;
+    color: #17191d;
+}
+
+.nexon-hyundai{
+    margin-left: 10px;
+}
+
+
+.nexon-login{
+    width: 465px;
+    height: 342px;
+    padding: 70px 0 0 55px;
+    margin: 10px 0 0 10px;
+    background-color: #fff;
+
+}
+
+.ID-login{
+    display: inline-block;
+    width: 250px;
+    height: 60px;
+    padding-top: 17px;
+    color: #fff;
+    text-align: center;
+    background-color: #17191d;
+    
+}
+
+.ID-login:hover{
+    background-color: #1a75ff;
+}
+
+.other-login{
+    margin-top: 8px;
+}
+
+.other-login>a{
+    display: inline-block;
+    width: 120px;
+    height: 52px;
+    padding-top: 18px;
+    margin-right: -3px;
+    font: 14px NEXON Gothic Bold;
+    color: #fff;
+    text-align: center;
+    background-color: #4a4e57;
+}
+.qr-login{
+    margin-left: 10px;
+}
+
+.other-login>a:hover{
+    background-color: #1a75ff;
+}
+
+.nexon-login-text{
+    width: 250px;
+    display: inline-block;
+    padding-top: 14px;
+    letter-spacing: -.3px;
+    color: #737881;
+    font-size: 13px;
+    position: relative;
+}
+
+.nexon-login-text a:hover{
+    color: #1a75ff;
+}
+
+.nexon-signup{
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+
+
+
+
 
 /* 게임 그리드 스타일 */
 .main-content {
