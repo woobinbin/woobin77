@@ -458,7 +458,7 @@ body {
     cursor: pointer;
     position: relative;
     border-top: 2px solid #1a75ff;
-    transition: transform 0.3s;
+    transition: all .15s linear, bottom 0s;
 }
 
 .new-card:hover{
@@ -486,6 +486,7 @@ body {
     border-radius: 8px;
     background-color: #07f;
     border: 1px solid #07f;
+    
 }
 
 .new-card:hover .new-early{
@@ -498,8 +499,9 @@ body {
     top: 55px;
     left: 20px;
     z-index: 10;
+    
 }
-.new-card:hover .new-info .new-title .new-category{
+.new-card:hover span{
     color: white;
 }
 
@@ -537,6 +539,7 @@ body {
 }
 .new-card:hover .new-text{
     color: white;
+    background-color: #07f;
 }
 .new-card-img{
     width: 140px;
