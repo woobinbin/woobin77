@@ -50,6 +50,10 @@
     font-size: 14px;
 }
 
+.tab-list>li>a:hover{
+    color: #07f;
+}
+
 .tab-list>li.active{
     border-bottom: 2px solid black;
     color: black;

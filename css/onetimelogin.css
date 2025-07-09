@@ -73,3 +73,36 @@
     background-color: #07f;
     transition: all .2s linear;
 }
+
+.guide{
+    font-weight: 700;
+    letter-spacing: -.6px;
+    color: #737881;
+    position: relative;
+    padding-top: 20px;
+    margin-top: 68px;
+    border-top: 1px solid #e5e8eb;
+    font-size: 13px;
+}
+
+.guide h3{
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: #737881;
+    font-size: 14px;
+}
+
+.guide>ul>li{
+    padding-top: 5px;
+}
+
+.per{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    letter-spacing: -.6px;
+}
+
+.per:hover{
+    color: #07f;
+}
