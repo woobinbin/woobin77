@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login-styles.css">
+    <link rel="stylesheet" href="css/login-tab.css">
+    <link rel="stylesheet" href="css/nexon-styles.css">
+    <link rel="stylesheet" href="css/onetimelogin.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="images/nexon_logo.png">
+    <script src="js/login.js" defer></script>
+    <script src="js/login-tab.js" defer></script>
+    <title>넥슨 회원로그인</title>
+</head>
+<body>
+    <div class="login-header">
+        <p class="headertext">넥슨 ID/비밀번호 기록이 남지 않는 일회용 로그인!</p>
+    </div>
+
+
+    <main class="login-main">
+        <div class="login-container">
+        <div class="login-logo">
+            <a href="index.html"><img src="images/logo_nexon.png" alt="넥슨 로고"></a>
+            </div>
+
+        <div class="login-tab">
+        <ul class="tab-list">
+            <li class="active"><a href="login.html">넥슨 ID 로그인</a></li>
+            <li><a href="onetimelogin.html">일회용 로그인</a></li>
+            <li><a href="qrlogin.html">QR 로그인</a></li>
+        </ul>
+        </div>
+
+        <div class="content">
+        <p class="info"><span>넥슨플레이>넥슨인증기>일회용 로그인</span>에서 8자리 숫자를 입력해주세요.</p>
+
+        <div class="pass">
+            <div class="pass1">
+                <input type="password" title="일회용 번호 앞 4자리" class="input01" placeholder="4자리" maxlength="4" onkeypress="return OnlyNumbers(event, 'inputMag', '일회용 로그인 번호는 숫자만 입력 가능합니다.')">
+            </div>
+            <div class="pass2">
+                <input type="password" title="일회용 번호 뒷 4자리" class="input02" placeholder="4자리" maxlength="4" onkeypress="return OnlyNumbers(event, 'inputMag', '일회용 로그인 번호는 숫자만 입력 가능합니다.')">
+            </div>
+
+            <p class="inputMag">일회용 로그인 번호를 입력해주세요.</p>
+        </div>
+
+        <div class="onetimelogin-button">
+        <button type="button" class="button1">일회용 로그인</button>
+        </div>
+
+        </div>
+
+        </div>
+
+    </main>
+        <footer>
+        <div class="footer-content">
+            
+            <p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

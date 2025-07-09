@@ -1,0 +1,75 @@
+.content{
+    max-width: 492px;
+    min-height: 100%;
+    padding: 0 16px 200px;
+    margin: 0 auto;
+}
+
+.info{
+    text-align: center;
+    font-size: 12px;
+    color: #737881;
+    margin-bottom: 50px;
+}
+
+.info span{
+    font-weight: 700;
+}
+
+.pass{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pass input{
+    width: 100%;
+    height: 56px;
+    padding: 18px 12px;
+    border: 1px solid #e5e8eb;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    outline: 0;
+    transition: border-color .15s linear;
+}
+
+.pass1{
+    padding-right: 4px;
+}
+
+.pass2{
+    padding-left: 4px;
+}
+
+
+.inputMag{
+    display: none;
+    height: 28px;
+    margin-top: -6px;
+    font-weight: 700;
+    letter-spacing: -.6px;
+    text-align: left;
+    color: #ff6060;
+}
+
+
+.onetimelogin-button{
+    padding-top: 18px;
+}
+
+.onetimelogin-button button{
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #17191d;
+    transition: all .15s linear;
+    cursor: pointer;
+}
+
+.onetimelogin-button button:hover{
+    outline: 0;
+    background-color: #07f;
+    transition: all .2s linear;
+}

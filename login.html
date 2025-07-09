@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/nexon_logo.png">
-    <title>NEXON - 로그인</title>
+    <title>넥슨 회원로그인</title>
     <link rel="stylesheet" href="css/nexon-styles.css">
     <link rel="stylesheet" href="css/login-styles.css">
+    <link rel="stylesheet" href="css/login-tab.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/login-tab.js" defer></script>
 </head>
 <body>
-    <div class="nexon-logo-wrapper">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="images/logo_nexon.png" alt="넥슨 로고">
-            </a>
-        </div>
-    </div>
+    
+
 
     <main class="login-main">
         <div class="login-container">
-            <div class="login-header">
-                <h1 class="login-title">NEXON ID 로그인</h1>
-                <p class="login-subtitle">하나의 넥슨 ID로 모든 넥슨 게임을 즐기세요!</p>
+            <div class="login-logo">
+                <a href="index.html"><img src="images/logo_nexon.png" alt="넥슨 로고"></a>
             </div>
+
+
+        <div class="login-tab">
+        <ul class="tab-list">
+            <li><a href="login.html">넥슨 ID 로그인</a></li>
+            <li><a href="onetimelogin.html">일회용 로그인</a></li>
+            <li><a href="qrlogin.html" data-tab="qr">QR 로그인</a></li>
+        </ul>
+        </div>
             
             <form class="login-form" id="loginForm">
                 <div class="input-group">
@@ -53,16 +59,6 @@
                 </div>
             </form>
 
-            <div class="qr-login">
-                <h3>QR코드 로그인</h3>
-                <div class="qr-container">
-                    <img src="images/qrcode.png" alt="QR 코드" class="qr-code">
-                    <p class="qr-guide">
-                        <img src="images/mobile.png" alt="모바일" class="mobile-icon">
-                        넥슨 모바일 앱으로 QR코드를 스캔하세요
-                    </p>
-                </div>
-            </div>
 
             <div class="social-login">
                 <h3>간편 로그인</h3>

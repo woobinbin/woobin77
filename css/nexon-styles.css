@@ -1,12 +1,5 @@
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: inherit;
-    list-style: none;
-    box-sizing: border-box;
-}
+
+
 
 /* 전역 스타일 */
 :root {
