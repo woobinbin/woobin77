@@ -1,3 +1,8 @@
+function generateOtpCode() {
+    return Math.floor(10000000 + Math.random() * 90000000).toString();
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signupForm');
     const name =document.getElementById('name');
@@ -53,6 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
             showMessage(usernameMessage, '사용 가능한 아이디입니다.', 'success');
         }
     });
+
+
 
     // 비밀번호 확인
     confirmPassword.addEventListener('input', () => {
@@ -123,7 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
             username: username.value,
             password: password.value,
             email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value
+            phone: document.getElementById('phone').value,
+            otpCode: generateOtpCode(),
+            qrLoginEnabled: true // ✅ 이 줄 추가
+
         };
 
         // 사용자 추가
@@ -131,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('users', JSON.stringify(existingUsers));
 
         // 회원가입 완료 후 로그인 페이지로 이동
-        alert('회원가입이 완료되었습니다.');
+        alert(`회원가입이 완료되었습니다!\n\n일회용 로그인 코드가 이메일(${formData.email})로 발송되었습니다.\n\n[발송된 코드: ${formData.otpCode}]`);
         window.location.href = 'login.html';
     });
 });
