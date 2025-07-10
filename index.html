@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <script src="js/game-filter.js" defer></script>
     <script src="js/viewtoggle.js" defer></script>
+    <script src="js/search.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -185,7 +186,7 @@
    
 
     <div class="right">
-      <input type="text" placeholder="게임명 검색">
+      <input type="text" id="search-input"  placeholder="게임명 검색">
       <button class="search-btn">🔍</button>
     </div>
   </div>
@@ -288,6 +289,14 @@
                 <img src="images/baram.png" alt="바람의나라" class="game-image">
                 <div class="game-info">
                     <h3 class="game-title">바람의나라</h3>
+                    <p class="game-category">RPG</p>
+                </div>
+            </a>
+
+             <a href="#" class="game-card" data-tags="#RPG,#Windows">
+                <img src="images/maple.jpg" alt="메이플스토리" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">메이플스토리</h3>
                     <p class="game-category">RPG</p>
                 </div>
             </a>
