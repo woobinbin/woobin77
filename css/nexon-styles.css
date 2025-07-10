@@ -665,31 +665,31 @@ body {
 
 /* 기존 .game-grid에 추가 */
 .game-grid.grid-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
 .game-grid.list-view {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .game-grid.list-view .game-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .game-grid.list-view .game-card img {
-  width: 120px;
-  height: auto;
+    width: 120px;
+    height: auto;
 }
 
 .view-icon.active {
-  opacity: 1;
-  font-weight: bold;
+    opacity: 1;
+    font-weight: bold;
 }
 
 .game-card {
