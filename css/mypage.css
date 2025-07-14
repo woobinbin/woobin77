@@ -1,18 +1,108 @@
-.mypage-container {
-  max-width: 400px;
-  margin: 50px auto;
-  font-family: sans-serif;
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.info p {
+.logo {
+  width: 120px;
+  margin-bottom: 30px;
+}
+
+.mypage-container {
+  background: #fff;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.nickname {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.mypage-extra-info {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.info-value {
+  color: #555;
+}
+
+.status-good {
+  color: green;
+  font-weight: bold;
+}
+
+.status-warning {
+  color: orange;
+}
+
+.status-danger {
+  color: red;
+}
+
+
+.info-box p {
+  font-size: 14px;
   margin: 10px 0;
 }
 
-button {
-  margin-top: 20px;
+.mypage-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
   padding: 10px 16px;
-  background-color: #07f;
-  color: white;
+  margin: 5px;
+  font-size: 14px;
+  background-color: #1a75ff;
+  color: #fff;
   border: none;
+  border-radius: 6px;
+  text-decoration: none;
   cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #005edb;
 }

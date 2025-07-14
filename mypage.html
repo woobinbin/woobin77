@@ -5,23 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>마이페이지</title>
 <link rel="stylesheet" href="css/mypage.css" />
+<link rel="icon" href="images/nexon_logo.png">
 <script src="js/mypage.js" defer></script>
 </head>
 <body>
-    <a href="index.html">
-            <img src="images/logo_nexon.png" alt="NEXON" class="logo">
-        </a>
-    <div class="mypage-container">
-    <h2>마이페이지</h2>
-    <div class="info">
-    <p><strong>닉네임:</strong> <span id="nickname"></span></p>
-    <p><strong>이메일:</strong> <span id="email"></span></p>
-    <p><strong>아이디:</strong> <span id="username"></span></p>
-    <p><strong>일회용 로그인 코드:</strong> <span id="otpCode"></span></p>
+     <a href="index.html">
+    <img src="images/logo_nexon.png" alt="NEXON" class="logo" />
+  </a>
+
+  <div class="mypage-container">
+    <div class="profile-header">
+       <label for="profileUpload">
+    <img src="images/default-profile.png" alt="프로필" id="profilePreview" class="profile-icon" />
+  </label>
+  <input type="file" id="profileUpload" accept="image/*" style="display: none;" />
+      <h2 class="nickname"><span id="nickname"></span> 님</h2>
     </div>
-    <button id="logoutBtn">로그아웃</button>
+    
+
+    <div class="mypage-extra-info">
+
+  <div class="info-item">
+    <span class="info-label">최근 접속일</span>
+    <span class="info-value" id="last-login">2025-07-14</span>
+  </div>
+
+  <div class="info-item">
+    <span class="info-label">등록된 게임</span>
+    <span class="info-value" id="registered-games">메이플스토리, 서든어택</span>
+  </div>
+
+  <div class="info-item">
+    <span class="info-label">보안 상태</span>
+    <span class="info-value status-good" id="security-status">양호</span>
+  </div>
+
+</div>
+
+    <div class="info-box">
+      <p><strong>이메일:</strong> <span id="email"></span></p>
+      <p><strong>아이디:</strong> <span id="username"></span></p>
+      <p><strong>일회용 로그인 코드:</strong> <span id="otpCode"></span></p>
     </div>
 
+    <div class="mypage-buttons">
+      <a href="find-password.html" class="btn">비밀번호 변경</a>
+      <button id="logoutBtn" class="btn logout">로그아웃</button>
+    </div>
+  </div>
 
 </body>
 </html>
