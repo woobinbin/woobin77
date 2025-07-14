@@ -18,9 +18,10 @@
         </a>
 
          <div class="user-info" style="display: none;">
-        <span>안녕하세요, <span class="user-nickname"></span>님!</span>
-        <a href="mypage.html" class="mypage-link">마이페이지</a>
         <button class="logout-button">로그아웃</button>
+        <span><img src="images/nexon_logo.png" alt="" class="user-logo"> <span class="user-nickname"></span></span>
+        <a href="mypage.html" class="mypage-link">마이페이지</a>
+        
     </div>
         <div class="auth-buttons">
             <a href="signup.html">회원가입</a>
@@ -127,7 +128,8 @@
             </li>
         </ul>
         </div>
-
+        
+        <!-- 현대카드 배너 -->
         <div class="nexon-hyundai">
             <img src="images/nexon_hyundai.png" alt="">
         </div>
@@ -138,7 +140,9 @@
                 <a href="onetimelogin.html" class="one-login">일회용 로그인</a>
                 <a href="qrlogin.html" class="qr-login">QR 로그인</a>
             </div>
+            
 
+            <!-- 로그인 전 박스 -->
             <div class="nexon-login-text">
                 <div class="find">
                 <a href="find-id.html">넥슨 ID찾기</a>
@@ -146,7 +150,50 @@
                 </div>
                 <a href="signup.html"><span class="nexon-signup">회원가입</span></a>
             </div>
+
         </div>
+
+        <!-- 로그인 후 캐시/보안 박스 -->
+    <div class="user-status-box">
+        <div class="user-tab-box">
+        <div class="tab-buttons">
+    <button class="tab-button active" data-tab="cash-tab">캐시/보안</button>
+    <button class="tab-button" data-tab="mygame-tab">MY게임 소식</button>
+    </div>
+    
+
+    <div id="cash-tab" class="tab-content active">
+  <div class="info-title"><b>캐시/보안</b></div>
+  <div class="info">
+    <p>넥슨캐시 <b>148</b></p>
+    <p>플레이포인트 <b>142</b></p>
+    <div class="grade"><span class="circle">A</span> 정상</div>
+  </div>
+  <div class="status-buttons">
+    <button>충전</button>
+    <button>자동충전</button>
+    <button>보안센터</button>
+  </div>
+</div>
+
+    <div id="mygame-tab" class="tab-content">
+  <div class="news-card">
+    <img src="images/nexon-notice1.png" alt="이벤트1" />
+    <div class="news-info">
+      <p class="news-title">퀵 스타트 이벤트</p>
+      <p class="news-desc">던전 5분 만에 마스터 클래스까지!</p>
+      <span class="news-date">25-07-03 ~ 25-08-28</span>
+    </div>
+  </div>
+  <div class="news-card">
+    <img src="images/nexon-notice2.jpg" alt="이벤트2" />
+    <div class="news-info">
+      <p class="news-title">메이플 신규 직업 린</p>
+      <p class="news-desc">풍성한 성장 지원과 린 굿즈 추첨 기회까지!</p>
+      <span class="news-date">25-06-19 ~</span>
+    </div>
+  </div>
+</div>
         </div>
         
     </section>
@@ -340,45 +387,79 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // 로그인 관련 요소들
-            const userInfo = document.querySelector('.user-info');
-            const guestLinks = document.querySelector('.auth-buttons');
-            const userNickname = document.querySelector('.user-nickname');
-            const logoutButton = document.querySelector('.logout-button');
+const userInfo = document.querySelector('.user-info');
+const guestLinks = document.querySelector('.auth-buttons');
+const userNickname = document.querySelector('.user-nickname');
+const logoutButton = document.querySelector('.logout-button');
 
-            // 로그인 상태 관리 (요소가 존재할 때만 처리)
-            if (userInfo && guestLinks && userNickname) {
-                const loggedInUser = sessionStorage.getItem('loggedInUser');
-                
-                if (loggedInUser) {
-                    const user = JSON.parse(loggedInUser);
-                    userNickname.textContent = `${user.nickname}`;
-                    userInfo.style.display = 'flex';
-                    guestLinks.style.display = 'none';
+// ✅ 로그인 후 메인 콘텐츠 전환 관련 요소들 (항상 상단에서 선언)
+const guestBox = document.querySelector('.nexon-login');
+const userBox = document.querySelector('.user-status-box');
+const sectionTitle = document.querySelector('.section-title');
 
-                     const sectionTitle = document.querySelector('.section-title');
+// 로그인 상태 관리 (요소가 존재할 때만 처리)
+if (userInfo && guestLinks && userNickname) {
+  const loggedInUser = sessionStorage.getItem('loggedInUser');
+
+  if (loggedInUser) {
+    const user = JSON.parse(loggedInUser);
+    userNickname.textContent = `${user.nickname}`;
+    userInfo.style.display = 'flex';
+    guestLinks.style.display = 'none';
+
     if (sectionTitle) {
-        sectionTitle.innerHTML = `
-            <span style="color: #0077ff; font-weight: 700;">${user.nickname}</span> 님, 어서오세요
-            <span style="font-size: 12px; color: gray; margin-left: 5px;">최근 로그인 시간 ${new Date().toLocaleString()}</span>
-            <a href="login-history.html" style="font-size: 12px; margin-left: 5px; text-decoration: underline;">로그인내역</a>
-        `;
+      sectionTitle.innerHTML = `
+        <span style="color: #0077ff; font-weight: 700;">${user.nickname}</span> 님, 어서오세요
+        <span style="font-size: 12px; color: gray; margin-left: 5px;">최근 로그인 시간 ${new Date().toLocaleString()}</span>
+        <a href="login-history.html" style="font-size: 12px; margin-left: 5px; text-decoration: underline;">로그인내역</a>
+      `;
     }
-    
-                } else {
-                    userInfo.style.display = 'none';
-                    guestLinks.style.display = 'flex';
-                }
 
-                // 로그아웃 처리
-                if (logoutButton) {
-                    logoutButton.addEventListener('click', () => {
-                        sessionStorage.removeItem('loggedInUser');
-                        userInfo.style.display = 'none';
-                        guestLinks.style.display = 'flex';
-                        window.location.reload();
-                    });
-                }
-            }
+    // 로그인 후 UI
+    if (guestBox) guestBox.style.display = 'none';
+    if (userBox) userBox.style.display = 'block';
+    
+  } else {
+
+    // 로그인 전 UI
+        userInfo.style.display = 'none';
+        guestLinks.style.display = 'flex';
+        if (guestBox) guestBox.style.display = 'block';
+        if (userBox) userBox.style.display = 'none';
+  }
+
+  // 로그아웃 처리
+  if (logoutButton) {
+    logoutButton.addEventListener('click', () => {
+      sessionStorage.removeItem('loggedInUser');
+      userInfo.style.display = 'none';
+      guestLinks.style.display = 'flex';
+      if (guestBox) guestBox.style.display = 'block';
+      if (userBox) userBox.style.display = 'none';
+      window.location.reload();
+    });
+  }
+}
+
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = {
+  cash: document.getElementById('cash-tab'),
+  news: document.getElementById('mygame-tab')
+};
+
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+   const selected = btn.dataset.tab;
+
+    // 버튼 active 토글
+    tabButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // 콘텐츠 표시 전환
+     Object.values(tabContents).forEach(content => {
+      content.classList.toggle('active', content.id === selected);
+  });
+});
 
             // 배너 슬라이더 기능
             const bannerImages = document.querySelector('.banner-images');
@@ -476,6 +557,7 @@
                 updateSlide(0, true);
             }
         });
+         });
     </script>
 </body>
 </html> 
