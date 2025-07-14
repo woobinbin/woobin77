@@ -177,23 +177,47 @@
 </div>
 
     <div id="mygame-tab" class="tab-content">
-  <div class="news-card">
+    <div class="news-wrapper">
+        <div class="news-card">
     <img src="images/nexon-notice1.png" alt="이벤트1" />
-    <div class="news-info">
-      <p class="news-title">퀵 스타트 이벤트</p>
-      <p class="news-desc">던전 5분 만에 마스터 클래스까지!</p>
-      <span class="news-date">25-07-03 ~ 25-08-28</span>
+    <div class="news-overlay">
+      <div class="news-top">
+        <span class="news-badge">이벤트</span>
+        <span class="news-date">25-07-03 ~ 25-08-28</span>
+      </div>
+      <div class="news-text">
+        <p class="news-title">퀵 스타트 이벤트</p>
+        <p class="news-desc">던전 5분 만에 마스터 클래스까지!</p>
+        <div class="news-footer">
+            <div class="news-icon">
+            <img src="images/nexon-notice-title1.png"/>
+            </div>
+          <span class="news-game">엘소드</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="news-card">
+  
+   <div class="news-card">
     <img src="images/nexon-notice2.jpg" alt="이벤트2" />
-    <div class="news-info">
-      <p class="news-title">메이플 신규 직업 린</p>
-      <p class="news-desc">풍성한 성장 지원과 린 굿즈 추첨 기회까지!</p>
-      <span class="news-date">25-06-19 ~</span>
+    <div class="news-overlay">
+      <div class="news-top">
+        <span class="news-badge">이벤트</span>
+        <span class="news-date">25-06-19 ~</span>
+      </div>
+      <div class="news-text">
+        <p class="news-title">메이플 신규 직업 린</p>
+        <p class="news-desc">풍성한 성장 지원과 린 굿즈 추첨 기회까지!</p>
+        <div class="news-footer">
+        <div class="news-icon">
+        <img src="images/nexon-notice-title2.jpg" />
+        </div>
+          <span class="news-game">메이플스토리</span>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+    </div>
         </div>
     </div>
         
@@ -397,6 +421,7 @@ const logoutButton = document.querySelector('.logout-button');
 const guestBox = document.querySelector('.nexon-login');
 const userBox = document.querySelector('.user-status-box');
 const sectionTitle = document.querySelector('.section-title');
+const hyundaiBanner = document.querySelector('.nexon-hyundai');
 
 // 로그인 상태 관리 (요소가 존재할 때만 처리)
 if (userInfo && guestLinks && userNickname) {
@@ -419,6 +444,7 @@ if (userInfo && guestLinks && userNickname) {
     // 로그인 후 UI
     if (guestBox) guestBox.style.display = 'none';
     if (userBox) userBox.style.display = 'block';
+    if (hyundaiBanner) hyundaiBanner.style.display = 'none';
     
   } else {
 
@@ -427,6 +453,7 @@ if (userInfo && guestLinks && userNickname) {
         guestLinks.style.display = 'flex';
         if (guestBox) guestBox.style.display = 'block';
         if (userBox) userBox.style.display = 'none';
+        if (hyundaiBanner) hyundaiBanner.style.display = 'block';
   }
 
   // 로그아웃 처리
@@ -437,6 +464,7 @@ if (userInfo && guestLinks && userNickname) {
       guestLinks.style.display = 'flex';
       if (guestBox) guestBox.style.display = 'block';
       if (userBox) userBox.style.display = 'none';
+      if (hyundaiBanner) hyundaiBanner.style.display = 'block';
       window.location.reload();
     });
   }

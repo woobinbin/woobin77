@@ -326,6 +326,7 @@ body {
 .best-list{
     display: flex;
     justify-content: space-between;
+    gap: 10px; /* 카드 간 간격만 설정 */
 }
 
 
@@ -541,84 +542,83 @@ body {
 
     /* 예시 뉴스 카드 */
 /* MY게임 소식 탭 카드 전체 영역 */
+.news-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+
+
 .news-card {
-  width: 100%;
-  height: 180px;
+  position: relative;
+  width: 290px;
+  height: 160px;
   overflow: hidden;
   border-radius: 8px;
-  position: relative;
-  margin-bottom: 14px;
 }
 
-.news-image {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.news-image img {
+.news-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
+  cursor: pointer;
 }
 
 .news-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   color: white;
-  padding: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .news-top {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
+  font-weight: bold;
 }
 
-.news-badge {
-  background-color: #ff6600;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: bold;
+.news-text {
+  font-size: 13px;
 }
 
 .news-title {
-  font-size: 15px;
   font-weight: bold;
+  margin-bottom: 4px;
 }
 
 .news-desc {
-  font-size: 13px;
-  margin-top: 2px;
+  margin-bottom: 6px;
 }
 
 .news-footer {
   display: flex;
   align-items: center;
-  margin-top: 8px;
-  gap: 6px;
+  gap: 4px;
 }
 
 .news-icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
 }
 
-.news-game {
-  font-size: 12px;
-}
-
-/* ✅ 호버 시 텍스트 사라짐 */
 .news-card:hover .news-overlay {
   opacity: 0;
+}
+
+.news-icon>img{
+    width: 100%;
 }
 
 
