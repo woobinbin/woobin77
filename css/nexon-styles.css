@@ -436,6 +436,61 @@ body {
     margin-left: 10px;
 }
 
+.tpa{
+    display: inline-block;
+    width: 250px;
+    height: 42px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.tpa>p{
+    display: inline-block;
+    padding-top: 3px;
+    margin-right: 15px;
+    color: #9fa1a7;
+    font-size: 13px;
+}
+
+.icon{
+    width: 22px;  /* 보여줄 크기 (작게 줄이기) */
+    height: 22px;
+    display: inline-block;
+    background-image: url("../images/nexon-login-logo.png");
+    background-repeat: no-repeat;
+    background-size: 200px 500px;  /* 원본 크기에 맞춤 */
+    margin-right: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.google-icon{
+    background-repeat: no-repeat;
+    background-position: 0 -50px;
+
+}
+
+
+.icon:hover {
+    opacity: 0.7;
+}
+
+/* 아이콘별 위치 */
+
+.facebook-icon {
+    background-position: 0 -125px;
+}
+
+.naver-icon {
+    background-position: 0 -250px;
+}
+
+.apple-icon {
+    background-position: 0 -375px;
+}
+
 .other-login>a:hover{
     background-color: #1a75ff;
 }
@@ -815,6 +870,16 @@ body {
   cursor: pointer;
 }
 
+.center>a{
+color: #4a4e57;
+font-weight: bold;
+font-size: 13px;
+}
+
+.center>a:hover{
+    color: #1a75ff;
+}
+
 
 
 /* 게임 필터 */
@@ -904,18 +969,17 @@ body {
 }
 
 .game-title {
-    font-size: 1.1rem;
-    color: var(--nexon-dark);
+    color: #17191d;
+    font-size: 16px;
     margin-bottom: 0.5rem;
-    font-weight: 500;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
 }
 
 .game-category {
     color: var(--nexon-gray);
     font-size: 0.85rem;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
 }
 
