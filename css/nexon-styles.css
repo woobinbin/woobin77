@@ -436,60 +436,48 @@ body {
     margin-left: 10px;
 }
 
-.tpa{
-    display: inline-block;
+/* ✅ 부모 박스 (넥슨 스타일) */
+.tpa {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background: #f9f9f9;      /* 넥슨 배경색 */
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 10px;
     width: 250px;
-    height: 42px;
-    text-align: center;
-    padding-top: 10px;
-    margin-top: 20px;
-    background-color: #f8f9fa;
 }
 
-.tpa>p{
-    display: inline-block;
-    padding-top: 3px;
-    margin-right: 15px;
-    color: #9fa1a7;
+.tpa p {
+    margin: 0;
     font-size: 13px;
+    color: #999;
+    white-space: nowrap; 
+    font-weight: bold;      /* 줄바꿈 방지 */
 }
 
-.icon{
-    width: 22px;  /* 보여줄 크기 (작게 줄이기) */
-    height: 22px;
-    display: inline-block;
-    background-image: url("../images/nexon-login-logo.png");
-    background-repeat: no-repeat;
-    background-size: 200px 500px;  /* 원본 크기에 맞춤 */
-    margin-right: 6px;
+
+.icons {
+    display: flex;
+    gap: 8px;
+}
+
+.icons img {
+    width: 30px;               /* 공식과 유사한 크기 */
+    height: 30px;      
+    padding: 4px;
+    box-sizing: border-box;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: background 0.2s, transform 0.2s;
 }
 
-.google-icon{
-    background-repeat: no-repeat;
-    background-position: 0 -50px;
-
+.icons img:hover {      
+    transform: scale(1.05);    /* 살짝 확대 효과 */
 }
 
 
-.icon:hover {
-    opacity: 0.7;
-}
 
-/* 아이콘별 위치 */
-
-.facebook-icon {
-    background-position: 0 -125px;
-}
-
-.naver-icon {
-    background-position: 0 -250px;
-}
-
-.apple-icon {
-    background-position: 0 -375px;
-}
 
 .other-login>a:hover{
     background-color: #1a75ff;
@@ -747,7 +735,7 @@ body {
 }
 
 .new-title span{
-        display: inline;
+    display: inline;
     padding: 2px 6px 0 0;
     font: 16px;
     line-height: 1.25;
@@ -850,16 +838,18 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  border-bottom: 1px solid #dde1e5;
+  
 }
 
 .top-bar .right input {
-  width: 302px;
+    width: 302px;
     height: 44px;
     padding: 0 3px;
     margin-right: 0;
     color: #222426;
     letter-spacing: -.3px;
-    border-bottom: 1px solid #dde1e5;
+    border: none;
     transition: all .15s linear;
 }
 
