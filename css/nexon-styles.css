@@ -305,7 +305,7 @@ body {
     margin: 5px 0 25px 3px;
     font-size: 16px;
     font-weight: 700;
-    color: #00cec6;
+    color: #1a75ff;
 }
 
 .btn{
@@ -366,7 +366,7 @@ body {
 }
 
 .best-card-category{
-    background-color: #00dbd3;
+    background-color: #1a75ff;
     display: block;
     width: 32px;
     height: 16px;
@@ -839,13 +839,14 @@ body {
   align-items: center;
   gap: 8px;
   border-bottom: 1px solid #dde1e5;
+  position: relative;
   
 }
 
 .top-bar .right input {
     width: 302px;
     height: 44px;
-    padding: 0 3px;
+    padding: 0 20px;
     margin-right: 0;
     color: #222426;
     letter-spacing: -.3px;
@@ -854,10 +855,12 @@ body {
 }
 
 .top-bar .right .search-btn {
+    position: absolute;
   background: none;
   border: none;
   font-size: 18px;
   cursor: pointer;
+  right: 20px;
 }
 
 .center>a{
@@ -885,7 +888,7 @@ font-size: 13px;
 .tag {
     font-size: 13px;
     padding: 6px 12px;
-    border-radius: 20px;
+    border-radius: 200px;
     background-color: #f4f5f7;
     border: none;
     cursor: pointer;
