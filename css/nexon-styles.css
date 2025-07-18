@@ -849,9 +849,12 @@ body {
     padding: 0 20px;
     margin-right: 0;
     color: #222426;
-    letter-spacing: -.3px;
     border: none;
     transition: all .15s linear;
+}
+
+#search-input{
+    border-radius: 20px;
 }
 
 .top-bar .right .search-btn {
